@@ -128,8 +128,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2962521750455969886, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2962521750455969886, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2962521750455969886, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2962521750455969886, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.75
+      value: -22.27
       objectReference: {fileID: 0}
     - target: {fileID: 2962521750455969886, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -137,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2962521750455969886, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.34
+      value: -9.48
       objectReference: {fileID: 0}
     - target: {fileID: 2962521750455969886, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -166,6 +178,10 @@ PrefabInstance:
     - target: {fileID: 2962521750455969886, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2962521750455969886, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4879905976722890979, guid: caf3987d3fbbde04995ab61096f7e12e, type: 3}
       propertyPath: m_Name
@@ -274,7 +290,7 @@ Transform:
   m_GameObject: {fileID: 1204423175}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 17.58, z: 1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -325,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Labirent_Room_Prefab: {fileID: 829153796}
-  Labirent_size: {x: 10, y: 10}
+  Labirent_size: {x: 20, y: 20}
 --- !u!1 &1795328272
 GameObject:
   m_ObjectHideFlags: 0

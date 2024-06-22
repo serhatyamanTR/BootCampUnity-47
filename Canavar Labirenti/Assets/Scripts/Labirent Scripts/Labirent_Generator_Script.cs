@@ -28,8 +28,6 @@ public class Labirent_Generator_Script : MonoBehaviour
                             Vector3 Room_position   =   new Vector3( x-(size.x/2f) , 0 , y-(size.y/2f) );
                             Labirent_Room newRoom   =   Instantiate(Labirent_Room_Prefab , Room_position , Quaternion.identity , transform );
                             rooms.Add(newRoom);
-                            Debug.Log("Yeni Room Pozisyonu" + Room_position);
-
                             yield return null;
                         }   
                     }
@@ -38,7 +36,7 @@ public class Labirent_Generator_Script : MonoBehaviour
                 List<Labirent_Room> complatedRooms  =   new List<Labirent_Room>();
 
                 //choose startin room
-                currentPath.Add(rooms[Random.Range(0, rooms.Count)]);
+                currentPath.Add(rooms[Mathf.FloorToInt(rooms.Count/2)-Mathf.CeilToInt(Labirent_size.y/2f)]);
 
                 currentPath[0].SetState(Labirent_Room_State.Current);
 
@@ -121,7 +119,8 @@ public class Labirent_Generator_Script : MonoBehaviour
                 {
                     int chosenDirection = Random.Range(0, possibleNextDirections.Count);
                     Labirent_Room chosenRoom = rooms[possibleNextRooms[chosenDirection]]; 
-
+                    Debug.Log("Seçilen oda" + chosenRoom);
+                    Debug.Log("Seçilen oda" + chosenDirection);
                     switch (possibleNextDirections[chosenDirection])
                         {
                             case 1:
