@@ -34,11 +34,38 @@ public class Labirent_Generator_Script : MonoBehaviour
                 
                 List<Labirent_Room> currentPath     =   new List<Labirent_Room>();
                 List<Labirent_Room> complatedRooms  =   new List<Labirent_Room>();
+                
+                //choose base rooms
+                List<Labirent_Room> baseRooms       = new List<Labirent_Room>();
+                baseRooms.Add(rooms[Mathf.FloorToInt(rooms.Count/2)-Mathf.CeilToInt(Labirent_size.y/2f)-1]);
+                baseRooms.Add(rooms[Mathf.FloorToInt(rooms.Count/2)-Mathf.CeilToInt(Labirent_size.y/2f)]);
+                baseRooms.Add(rooms[Mathf.FloorToInt(rooms.Count/2)-Mathf.CeilToInt(Labirent_size.y/2f)+1]);
+                baseRooms.Add(rooms[Mathf.FloorToInt(rooms.Count/2)+Mathf.CeilToInt(Labirent_size.y/2f)-1]);
+                baseRooms.Add(rooms[Mathf.FloorToInt(rooms.Count/2)+Mathf.CeilToInt(Labirent_size.y/2f)]);
+                baseRooms.Add(rooms[Mathf.FloorToInt(rooms.Count/2)+Mathf.CeilToInt(Labirent_size.y/2f)+1]);
+                baseRooms.Add(rooms[Mathf.FloorToInt(rooms.Count/2)-Mathf.CeilToInt(3*Labirent_size.y/2f)-1]);
+                baseRooms.Add(rooms[Mathf.FloorToInt(rooms.Count/2)-Mathf.CeilToInt(3*Labirent_size.y/2f)]);
+                baseRooms.Add(rooms[Mathf.FloorToInt(rooms.Count/2)-Mathf.CeilToInt(3*Labirent_size.y/2f)+1]);
 
+                for (int i=0; i<baseRooms.Count; i++)
+                    {                        
+                        baseRooms[i].RemoveWall(0);
+                        baseRooms[i].RemoveWall(1);
+                        baseRooms[i].RemoveWall(2);
+                        baseRooms[i].RemoveWall(3);
+
+                    }
                 //choose startin room
-                currentPath.Add(rooms[Mathf.FloorToInt(rooms.Count/2)-Mathf.CeilToInt(Labirent_size.y/2f)]);
+                currentPath.Add(rooms[rooms.Count/2]);
 
                 currentPath[0].SetState(Labirent_Room_State.Current);
+
+                for (int i=0; i<4f; i++)
+                    {
+                        rooms[rooms.Count/2].RemoveWall(i);
+                        rooms[(rooms.Count/2)+Labirent_size.y-1].RemoveWall(i);
+                    }
+
 
                 while (complatedRooms.Count < rooms.Count)
                     {
@@ -99,63 +126,64 @@ public class Labirent_Generator_Script : MonoBehaviour
                                     }
                             }
 
-            if (currentRoomY > 0)
-                {
-                    // Check node below the current room
-                    if  (
-                            !complatedRooms.Contains(rooms[currentRoomIndex - 1]) 
-                            &&
-                            !currentPath.Contains(rooms[currentRoomIndex - 1])
-                        )
+                        if (currentRoomY > 0)
+                            {
+                                // Check node below the current room
+                                if  (
+                                        !complatedRooms.Contains(rooms[currentRoomIndex - 1]) 
+                                        &&
+                                        !currentPath.Contains(rooms[currentRoomIndex - 1])
+                                    )
 
-                        {
-                            possibleNextDirections.Add(4);
-                            possibleNextRooms.Add(currentRoomIndex - 1);
-                        }
-                }
+                                    {
+                                        possibleNextDirections.Add(4);
+                                        possibleNextRooms.Add(currentRoomIndex - 1);
+                                    }
+                            }
 
-            // Choose next room
-            if (possibleNextDirections.Count > 0)
-                {
-                    int chosenDirection = Random.Range(0, possibleNextDirections.Count);
-                    Labirent_Room chosenRoom = rooms[possibleNextRooms[chosenDirection]]; 
-                    Debug.Log("Seçilen oda" + chosenRoom);
-                    Debug.Log("Seçilen oda" + chosenDirection);
-                    switch (possibleNextDirections[chosenDirection])
-                        {
-                            case 1:
-                                chosenRoom.RemoveWall(1);
-                                currentPath[currentPath.Count - 1].RemoveWall(0);
-                                break;
-                            case 2:
-                                chosenRoom.RemoveWall(0);
-                                currentPath[currentPath.Count - 1].RemoveWall(1);
-                                break;
-                            case 3:
-                                chosenRoom.RemoveWall(3);
-                                currentPath[currentPath.Count - 1].RemoveWall(2);
-                                break;
-                            case 4:
-                                chosenRoom.RemoveWall(2);
-                                currentPath[currentPath.Count - 1].RemoveWall(3);
-                                break;
-                        }
-                
+                        // Choose next room
+                        if (possibleNextDirections.Count > 0)
+                            {
+                                int chosenDirection = Random.Range(0, possibleNextDirections.Count);
+                                Labirent_Room chosenRoom = rooms[possibleNextRooms[chosenDirection]]; 
+                                Debug.Log("Seçilen oda" + chosenRoom);
+                                Debug.Log("Seçilen oda" + chosenDirection);
+                                switch (possibleNextDirections[chosenDirection])
+                                    {
+                                        // 0 = x+,  1= x-,  2= z+,  3=z- //
+                                        case 1:
+                                            chosenRoom.RemoveWall(1);
+                                            currentPath[currentPath.Count - 1].RemoveWall(0); 
+                                            break;
+                                        case 2:
+                                            chosenRoom.RemoveWall(0);
+                                            currentPath[currentPath.Count - 1].RemoveWall(1);
+                                            break;
+                                        case 3:
+                                            chosenRoom.RemoveWall(3);
+                                            currentPath[currentPath.Count - 1].RemoveWall(2);
+                                            break;
+                                        case 4:
+                                            chosenRoom.RemoveWall(2);
+                                            currentPath[currentPath.Count - 1].RemoveWall(3);
+                                            break;
+                                    }
 
-                    currentPath.Add(chosenRoom);
-                    chosenRoom.SetState(Labirent_Room_State.Current);
-                }
-                else
-                {
-                    complatedRooms.Add(currentPath[currentPath.Count - 1]);
 
-                    currentPath[currentPath.Count-1].SetState(Labirent_Room_State.Completed);
+                                currentPath.Add(chosenRoom);
+                                chosenRoom.SetState(Labirent_Room_State.Current);
+                            }
+                            else
+                            {
+                                complatedRooms.Add(currentPath[currentPath.Count - 1]);
 
-                    currentPath.RemoveAt(currentPath.Count-1);
+                                currentPath[currentPath.Count-1].SetState(Labirent_Room_State.Completed);
 
-                }
+                                currentPath.RemoveAt(currentPath.Count-1);
 
-            yield return new    WaitForSeconds(0.05f);
-        }
-    }
+                            }
+
+                        yield return new    WaitForSeconds(0.02f);
+                    }
+            }
 }
