@@ -25,7 +25,7 @@ public class Labirent_Generator_Script : MonoBehaviour
                      for(int y = 0; y < size.y; y++)
                         
                         {
-                            Vector3 Room_position   =   new Vector3( x-(size.x/2f) , 0 , y-(size.y/2f) );
+                            Vector3 Room_position   =   new Vector3(transform.localPosition.x + x-(size.x/2f) , 0 ,transform.localPosition.y + y-(size.y/2f) );
                             Labirent_Room newRoom   =   Instantiate(Labirent_Room_Prefab , Room_position , Quaternion.identity , transform );
                             rooms.Add(newRoom);
                             yield return null;
