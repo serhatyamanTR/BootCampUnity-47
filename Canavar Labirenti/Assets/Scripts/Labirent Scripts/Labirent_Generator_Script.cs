@@ -183,7 +183,7 @@ public class Labirent_Generator_Script : MonoBehaviour
 
                             }
 
-                        yield return new    WaitForSeconds(0.01f);
+                        
                     }
             }
 }
