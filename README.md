@@ -24,49 +24,49 @@
       <th>Socials</th>
     </tr>
     <tr>
-      <td><img src="screenshots/sümeyye.jpg" width="50" height="65" /></td>
+      <td><img src="Canavar Labirenti/screenshots/sümeyye.jpg" width="50" height="65" /></td>
       <td>Sümeyye Ordueri</td>
       <td>Scrum Master</td>
       <td>
-        <a href="https://github.com/sumeyyeordueri" target="_blank"><img src="screenshots/github.png" width="20" height="20"/></a>
-        <a href="https://www.linkedin.com/in/sumeyyeordueri/" target="_blank" ><img src="screenshots/linkedin.png.webp" width="20" height="20" /></a>
+        <a href="https://github.com/sumeyyeordueri" target="_blank"><img src="Canavar Labirenti/screenshots/github.png" width="20" height="20"/></a>
+        <a href="https://www.linkedin.com/in/sumeyyeordueri/" target="_blank" ><img src="Canavar Labirenti/screenshots/linkedin.png.webp" width="20" height="20" /></a>
         <a></a>
       </td>
     </tr>
     <tr>
-      <td><img src= "screenshots/semi.jpeg" width="50" height="50" /></td>
+      <td><img src= "Canavar Labirenti/screenshots/semi.jpeg" width="50" height="50" /></td>
       <td>Semi Yaeş</td>
       <td>Product Owner</td>
       <td>
-        <a href="https://github.com/HappyVonLosealot" target="_blank"><img src="screenshots/github.png" width="20" height="20"/></a>
-        <a href="https://tr.linkedin.com/in/semiyaes/" target="_blank"><img src="screenshots/linkedin.png.webp" width="20" height="20" /></a>
+        <a href="https://github.com/HappyVonLosealot" target="_blank"><img src="Canavar Labirenti/screenshots/github.png" width="20" height="20"/></a>
+        <a href="https://tr.linkedin.com/in/semiyaes/" target="_blank"><img src="Canavar Labirenti/screenshots/linkedin.png.webp" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
-      <td><img src="screenshots/serhat.jpeg" width="50" height="50" /></td>
+      <td><img src="Canavar Labirenti/screenshots/serhat.jpeg" width="50" height="50" /></td>
       <td>Serhat Yaman</td>
       <td>Developer</td>
       <td>
-        <a href="https://github.com/serhatyamanTR" target="_blank"><img src="screenshots/github.png" width="20" height="20"/></a>
-        <a href="https://tr.linkedin.com/in/serhatyamantr/tr" target="_blank"><img src="screenshots/linkedin.png.webp" width="20" height="20" /></a>
+        <a href="https://github.com/serhatyamanTR" target="_blank"><img src="Canavar Labirenti/screenshots/github.png" width="20" height="20"/></a>
+        <a href="https://tr.linkedin.com/in/serhatyamantr/tr" target="_blank"><img src="Canavar Labirenti/screenshots/linkedin.png.webp" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
-      <td><img src="screenshots/samet.jpeg" width="50" height="50" /></td>
+      <td><img src="Canavar Labirenti/screenshots/samet.jpeg" width="50" height="50" /></td>
       <td>Samet Koşmaz</td>
       <td>Developer</td>
       <td>
-        <a href="https://github.com/smtksmz" target="_blank"><img src="screenshots/github.png" width="20" height="20"/></a>
-        <a href="https://tr.linkedin.com/in/samet-ko%C5%9Fmaz-808665239" target="_blank"><img src="screenshots/linkedin.png.webp" width="20" height="20" /></a>
+        <a href="https://github.com/smtksmz" target="_blank"><img src="Canavar Labirenti/screenshots/github.png" width="20" height="20"/></a>
+        <a href="https://tr.linkedin.com/in/samet-ko%C5%9Fmaz-808665239" target="_blank"><img src="Canavar Labirenti/screenshots/linkedin.png.webp" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
-      <td><img src="screenshots/sultan.JPG" width="50" height="40" /></td>
+      <td><img src="Canavar Labirenti/screenshots/sultan.JPG" width="50" height="40" /></td>
       <td>Sultan Eldekci</td>
       <td>Developer</td>
       <td>
-        <a href="https://github.com/EldekciS" target="_blank"><img src="screenshots/github.png" width="20" height="20"/></a>
-        <a href="https://www.linkedin.com/in/sultan-eldekci-8430a0317/" target="_blank"><img src="screenshots/linkedin.png.webp" width="20" height="20" /></a>
+        <a href="https://github.com/EldekciS" target="_blank"><img src="Canavar Labirenti/screenshots/github.png" width="20" height="20"/></a>
+        <a href="https://www.linkedin.com/in/sultan-eldekci-8430a0317/" target="_blank"><img src="Canavar Labirenti/screenshots/linkedin.png.webp" width="20" height="20" /></a>
           <a ></a>
       </td>
     </tr>
