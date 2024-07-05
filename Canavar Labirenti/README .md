@@ -113,7 +113,7 @@
 
 ## Product Backlog URL
 
--  https://destiny-brisket-30c.notion.site/49ebb322190641c2975356712275675e?v=08c66aa7560d4956b15a56f142c1bd29
+[Team U-47 Notion Backlog Board](https://destiny-brisket-30c.notion.site/49ebb322190641c2975356712275675e?v=08c66aa7560d4956b15a56f142c1bd29)
 
 ---
 
@@ -121,15 +121,14 @@
 
 - **Sprint Notları**
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
+- **Sprint içinde tamamlanması planlanan puan**: 100 Puan
 
-- **Puan tamamlama mantığı**: Puanlamaya dahil olan görevler:  Oyun Fikri, Assetlerin tamamlanması, Kartların  Oluşturulması, Labirent Üretimi,  Labirent Seçimleri, UI Hazırlanması, AI modeli oluşturma
-
-
-- **Backlog düzeni ve Story seçimleri**: 
+- **Puan tamamlama mantığı**: Puanlamaya dahil olan görevler:  Oyun Fikri, Assetlerin tamamlanması, Kartların  Oluşturulması, Labirent Üretimi,  Labirent Seçimleri, UI Hazırlanması, AI modeli oluşturma.
+Hedeflenen sprint puanına ulaşılmıştır.
 
 - **Daily Scrum**: Whatsapp üzerinden görüşmeler sağlanmıştır. Discorddan toplantılar düzenlenmiştir.  
-Toplantılarımızdan görüntülerin yer aldığı link:  https://destiny-brisket-30c.notion.site/Toplant-G-r-nt-leri-12b9b682cedd4552ba1635b81f8021ca
+[Toplantılarımızdan görüntülerin yer aldığı link](https://destiny-brisket-30c.notion.site/49ebb322190641c2975356712275675e?v=08c66aa7560d4956b15a56f142c1bd29)
+
 - **Sprint board update**: Sprint board screenshotları: 
 
 - <img width="1000" alt="backlog1" src="https://github.com/serhatyamanTR/BootCampUnity-47/assets/126915465/a3a7ccba-e356-42d1-8a2d-5ee05907f145">
@@ -157,7 +156,7 @@ Toplantılarımızdan görüntülerin yer aldığı link:  https://destiny-brisk
 - ![StartScreen](https://github.com/serhatyamanTR/BootCampUnity-47/assets/126915465/b242c3a3-5430-4397-96cb-657b2374e351)
 
 **Oyunun AI Modeli Oluşturulmasındaki Görüntüleri** 
-- https://destiny-brisket-30c.notion.site/Task-18928375f988428099c4e288db1de036
+- [Oyunun AI Modeli Oluşturulmasındaki Görüntülerinin Linki](https://destiny-brisket-30c.notion.site/Task-18928375f988428099c4e288db1de036)
 
 - ![A_tensorboard](https://github.com/serhatyamanTR/BootCampUnity-47/assets/126915465/10593d4b-d115-4461-9c0b-f6cb07eee1d1)
 
@@ -171,7 +170,7 @@ Kartların  Oluşturulması, Labirent Üretimi,  Labirent Seçimleri, UI Hazırl
 
   - Kodlama tarafında ekip üyelerinin üzerine eşit oranda görevi dağıtılma kararı alınmıştır.
   - Sonraki sprintte AI üzerine daha çok yoğunlaşılacaktır.
-  - Ekip ruhu yakalanmıştır.
+  
 
 
 ---
