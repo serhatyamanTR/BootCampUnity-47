@@ -174,3 +174,34 @@ Kartların  Oluşturulması, Labirent Üretimi,  Labirent Seçimleri, UI Hazırl
 
 
 ---
+## SPRİNT 2
+
+**Sprint içinde tamamlanması planlanan puan**: 80 Puan
+
+**Daily Scrum**: Daily Scrum toplantıları hem Whatsapp üzerinden hem de Discord üzerinden devam etmiştir. Discord'da haftada birkaç gün toplantılar yapılmıştır.  
+[Toplantılarımızdan görüntülerin yer aldığı link](https://destiny-brisket-30c.notion.site/2-Sprint-Toplant-G-r-nt-leri-b466760805764259bc4c1f9267333711)
+
+ **Sprint board update**: Sprint board screenshotları 
+
+<img width="1118" alt="sprint2" src="https://github.com/user-attachments/assets/f12538ef-4b3c-4bac-9d2d-73334f2181e3">
+
+
+ **Ürün Durumu**:  Ekran görüntüleri:
+
+![cehennem](https://github.com/user-attachments/assets/eceb9844-2051-49dd-8bac-75de43fac6cd)
+
+
+![orman](https://github.com/user-attachments/assets/39e0c15c-5816-4de5-bf3a-b8b2c3d5de0f)
+
+
+ **Sprint Review**: 
+ - UI tasarımaları güncellenmiştir. Hangar/ Dış Oda oluşturulmuştur. Kart Scriptlerinin yazımına başlanmıştır. AI monster geliştirilmektedir. Texture ve Aksesuar assetleri incelenmiş yerleştirilmiştir. Level Design yapılmıştır.
+ - Sprint 2'nin sonunda ekip ile toplanılmış ve Sprint gözden geçirilmiştir.
+ - Sprint Review katılımcıları: Semi Yaeş, Sümeyye Ordueri, Serhat Yaman, Samet Koşmaz, Sultan Eldekci
+
+
+ **Sprint Retrospective:**
+- Sprint sonunda alınan puan 70'dir.
+- Ekip üyelerinin sarfetmesi gereken efor arttırılmalıdır.
+  
+
