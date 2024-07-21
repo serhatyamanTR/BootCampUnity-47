@@ -175,8 +175,8 @@ Kartların  Oluşturulması, Labirent Üretimi,  Labirent Seçimleri, UI Hazırl
 
 ---
 ## SPRİNT 2
-- **Sprint Notları**
-  Detaylı incelemeler Product Backlog URL içerisinden incelenebilir. Bu sprintin daily scrum görüntüleri de linkte yer almaktadır.
+ **Sprint Notları**:
+- Detaylı incelemeler Product Backlog URL içerisinden incelenebilir. Bu sprintin daily scrum görüntüleri de linkte yer almaktadır.
 
 **Sprint içinde tamamlanması planlanan puan**: 80 Puan
 
