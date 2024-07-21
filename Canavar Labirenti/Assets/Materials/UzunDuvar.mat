@@ -10,7 +10,7 @@ Material:
   m_Name: UzunDuvar
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 2100000, guid: 34a7af6d02350254e9cb395769830b9d, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_ModifiedSerializedProperties: 16
   m_ValidKeywords:
   - _METALLICGLOSSMAP
   - _NORMALMAP
@@ -46,7 +46,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _DstBlend: 0
+    - _Mode: 0
+    - _SrcBlend: 1
+    - _ZWrite: 1
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
