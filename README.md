@@ -175,8 +175,13 @@ Kartların  Oluşturulması, Labirent Üretimi,  Labirent Seçimleri, UI Hazırl
 
 ---
 ## SPRİNT 2
+- **Sprint Notları**
+  Detaylı incelemeler Product Backlog URL içerisinden incelenebilir. Bu sprintin daily scrum görüntüleri de linkte yer almaktadır.
 
 **Sprint içinde tamamlanması planlanan puan**: 80 Puan
+
+**Puan tamamlama mantığı**: Bu sprintte UI tasarımaların güncellenmesi,Hangar/ Dış Oda oluşturulması, Kart Scriptlerinin yazımına başlanması, AI monster geliştirilmesi, Texture ve Aksesuar assetleri incelenip yerleştirilmesi ve Level Design yapılması hedeflenmiştir.
+Hedeflenen sprint puanı 80 dir ve 70 puanla tamamlanmıştır.
 
 **Daily Scrum**: Daily Scrum toplantıları hem Whatsapp üzerinden hem de Discord üzerinden devam etmiştir. Discord'da haftada birkaç gün toplantılar yapılmıştır.  
 [Toplantılarımızdan görüntülerin yer aldığı link](https://destiny-brisket-30c.notion.site/2-Sprint-Toplant-G-r-nt-leri-b466760805764259bc4c1f9267333711)
