@@ -49,6 +49,10 @@ Material:
     m_Floats:
     - _GlossMapScale: 1
     m_Colors:
+ HEAD:Canavar Labirenti/Assets/Materials/UzunDuvar_Lanetli.mat
     - _Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+
+    - _Color: {r: 0.6679245, g: 0.22054105, b: 0.22054105, a: 1}
+ Cehennem-Maps:Canavar Labirenti/Assets/Materials/UzunDuvar.mat
   m_BuildTextureStacks: []
   m_AllowLocking: 1
