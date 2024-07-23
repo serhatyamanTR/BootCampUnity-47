@@ -16,7 +16,7 @@ public class Cam_Kroki_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
         {
-
+            SelectionKoor = transform.position;
         }
 
     // Update is called once per frame
@@ -46,9 +46,5 @@ public class Cam_Kroki_script : MonoBehaviour
 
         }
 
-    public static implicit operator Vector3(Cam_Kroki_script v)
-    {
-        throw new NotImplementedException();
-    }
 }
 
