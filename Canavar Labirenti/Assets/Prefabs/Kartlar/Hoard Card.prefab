@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 7578092686479402708}
   - component: {fileID: 8377648317257533375}
   - component: {fileID: 5819337441827210495}
-  - component: {fileID: 1598739936913977775}
+  - component: {fileID: 5040273042796708645}
   m_Layer: 5
   m_Name: Hoard Card
   m_TagString: Untagged
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 4320011436110721206}
   infoText: {fileID: 7312741714357591086}
---- !u!114 &1598739936913977775
+--- !u!114 &5040273042796708645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

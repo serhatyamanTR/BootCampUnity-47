@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
@@ -8,6 +9,7 @@ public class DeckManager : MonoBehaviour
     public List<GameObject> cardPrefabs; // Kart prefablarý listesi
     public Transform handPanel; // El paneli
     public Transform deckPanel; // Deste paneli
+    public Transform graveyardPanel; // Mezar paneli
     public TextMeshProUGUI deckCountText; // Deste sayýsýný gösteren text
     public TextMeshProUGUI playedCardsText; // Oynanan kartlarý gösteren text
 
@@ -18,6 +20,7 @@ public class DeckManager : MonoBehaviour
     void Start()
     {
         InitializeDeck();
+        DealStartingHand();
         UpdateDeckCount();
     }
 
@@ -25,11 +28,24 @@ public class DeckManager : MonoBehaviour
     {
         for (int i = 0; i < 30; i++)
         {
-            // Kart prefablarýný rastgele seçerek desteyi oluþtur
             GameObject randomCardPrefab = cardPrefabs[Random.Range(0, cardPrefabs.Count)];
             GameObject newCard = Instantiate(randomCardPrefab, deckPanel);
             newCard.name = "Card " + (i + 1);
             deck.Add(newCard);
+        }
+    }
+
+    void DealStartingHand()
+    {
+        StartCoroutine(DealCardsCoroutine());
+    }
+
+    IEnumerator DealCardsCoroutine()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            DrawCard();
+            yield return new WaitForSeconds(0.5f); // Animasyon süresi
         }
     }
 
@@ -39,10 +55,28 @@ public class DeckManager : MonoBehaviour
         {
             GameObject drawnCard = deck[0];
             deck.RemoveAt(0);
-            drawnCard.transform.SetParent(handPanel);
             hand.Add(drawnCard);
+            StartCoroutine(MoveCardToHand(drawnCard));
             UpdateDeckCount();
         }
+    }
+
+    IEnumerator MoveCardToHand(GameObject card)
+    {
+        Vector3 startPos = card.transform.position;
+        Vector3 endPos = handPanel.position;
+        float elapsedTime = 0f;
+        float duration = 0.5f; // Animasyon süresi
+
+        while (elapsedTime < duration)
+        {
+            card.transform.position = Vector3.Lerp(startPos, endPos, (elapsedTime / duration));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        card.transform.SetParent(handPanel);
+        card.transform.localPosition = Vector3.zero;
     }
 
     public void PlayCard(GameObject card)
@@ -50,21 +84,22 @@ public class DeckManager : MonoBehaviour
         if (hand.Contains(card))
         {
             hand.Remove(card);
-            card.transform.SetParent(null); // Panelden çýkar
+            card.transform.SetParent(graveyardPanel); // Kartý mezar paneline taþý
             playedCards.Add(card);
             UpdatePlayedCards();
 
-            // Kartýn türüne göre mesaj göster
             string cardType = GetCardType(card);
             Debug.Log(cardType + " aktif edildi");
+
+            if (hand.Count == 0)
+            {
+                StartCoroutine(DealCardsCoroutine());
+            }
         }
     }
 
     string GetCardType(GameObject card)
     {
-        // Kartýn türünü belirleyen bir metot
-        // Örneðin, kartýn adý veya bir bileþeni üzerinden tür belirleyebilirsiniz:
-        // Bu örnekte kartýn adýný kullanarak tür belirliyoruz:
         if (card.name.Contains("Duvar")) return "Duvar";
         if (card.name.Contains("Büyü")) return "Büyü";
         if (card.name.Contains("Canavar")) return "Canavar";
@@ -74,7 +109,6 @@ public class DeckManager : MonoBehaviour
 
         return "Bilinmeyen";
     }
-
 
     void UpdateDeckCount()
     {
@@ -92,7 +126,6 @@ public class DeckManager : MonoBehaviour
 
     public void ShowGraveyard()
     {
-        // Mevcut durumda oynanan kartlarý bir pencerede göster
         string graveyardText = "Oynanan Kartlar:\n";
         foreach (GameObject card in playedCards)
         {
@@ -100,5 +133,4 @@ public class DeckManager : MonoBehaviour
         }
         Debug.Log(graveyardText); // Veya bir UI Text bileþeni ile gösterin
     }
-
 }

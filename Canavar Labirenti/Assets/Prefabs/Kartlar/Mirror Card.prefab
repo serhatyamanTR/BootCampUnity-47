@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6442914526785291777}
   - component: {fileID: 9038035760539538663}
   - component: {fileID: 6311031831629774298}
-  - component: {fileID: 1936448702560483712}
+  - component: {fileID: 2172382475787914015}
   m_Layer: 5
   m_Name: Mirror Card
   m_TagString: Untagged
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 685286175223087200}
   infoText: {fileID: 8673028110658568858}
---- !u!114 &1936448702560483712
+--- !u!114 &2172382475787914015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

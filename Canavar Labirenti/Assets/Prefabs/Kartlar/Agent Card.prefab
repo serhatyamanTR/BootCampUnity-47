@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 7997661892391953877}
   - component: {fileID: 829831391550210440}
   - component: {fileID: 2176561896445440441}
-  - component: {fileID: -597913746315411804}
+  - component: {fileID: 1603733266629793491}
   m_Layer: 5
   m_Name: Agent Card
   m_TagString: Untagged
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 1209254389620088672}
   infoText: {fileID: 8019173610931971145}
---- !u!114 &-597913746315411804
+--- !u!114 &1603733266629793491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

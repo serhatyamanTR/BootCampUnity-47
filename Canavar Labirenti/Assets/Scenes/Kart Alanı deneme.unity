@@ -382,6 +382,7 @@ MonoBehaviour:
   - {fileID: 5703902868005029265, guid: 5ab2eff8f3154ef4a8d51fdef8348b30, type: 3}
   handPanel: {fileID: 1432003939}
   deckPanel: {fileID: 536499470}
+  graveyardPanel: {fileID: 1868610786}
   deckCountText: {fileID: 1558368523}
   playedCardsText: {fileID: 1935097412}
 --- !u!224 &417872560
@@ -497,7 +498,7 @@ GameObject:
   - component: {fileID: 536499471}
   m_Layer: 5
   m_Name: DeckPanel
-  m_TagString: Untagged
+  m_TagString: DeckPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1303,7 +1304,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 3
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1

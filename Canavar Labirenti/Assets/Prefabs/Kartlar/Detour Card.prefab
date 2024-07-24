@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 3178450749304536612}
   - component: {fileID: 1621562178505063151}
   - component: {fileID: 7580671447940611085}
-  - component: {fileID: 3487364763211895273}
+  - component: {fileID: 7271123024459326693}
   m_Layer: 5
   m_Name: Detour Card
   m_TagString: Untagged
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 8879268785163164890}
   infoText: {fileID: 8507002784996346395}
---- !u!114 &3487364763211895273
+--- !u!114 &7271123024459326693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

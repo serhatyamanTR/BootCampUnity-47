@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7618549216201437926}
   - component: {fileID: 3556564436619124286}
   - component: {fileID: 4959834243489428896}
-  - component: {fileID: 3370348238415120487}
+  - component: {fileID: 5551037721704625772}
   m_Layer: 5
   m_Name: Shuffle Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 8353830816037687374}
   infoText: {fileID: 6095909584878629088}
---- !u!114 &3370348238415120487
+--- !u!114 &5551037721704625772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

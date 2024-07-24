@@ -9,6 +9,7 @@ TagManager:
   - room
   - zemin
   - PlayableArea
+  - DeckPanel
   layers:
   - Default
   - TransparentFX

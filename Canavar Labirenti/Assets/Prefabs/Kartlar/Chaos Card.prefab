@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7465618975972580331}
   - component: {fileID: 2535095740695280228}
   - component: {fileID: 9083758430645310576}
-  - component: {fileID: 8054511219480054118}
+  - component: {fileID: -1536882405182318742}
   m_Layer: 5
   m_Name: Chaos Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 1581082625278766174}
   infoText: {fileID: 2841381013892123091}
---- !u!114 &8054511219480054118
+--- !u!114 &-1536882405182318742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

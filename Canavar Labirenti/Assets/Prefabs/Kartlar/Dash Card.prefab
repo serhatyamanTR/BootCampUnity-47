@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5460850616440992519}
   - component: {fileID: 1948392976580413048}
   - component: {fileID: 7426099702447448344}
-  - component: {fileID: -6676132937636626967}
+  - component: {fileID: 7304921160632919619}
   m_Layer: 5
   m_Name: Dash Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 7558651563841437116}
   infoText: {fileID: 3999418280394543197}
---- !u!114 &-6676132937636626967
+--- !u!114 &7304921160632919619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

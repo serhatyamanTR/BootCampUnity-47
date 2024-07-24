@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1792271849079962660}
   - component: {fileID: 535686096270282373}
   - component: {fileID: 1471153220374596003}
-  - component: {fileID: -7132170617556321137}
+  - component: {fileID: 8152903630651910374}
   m_Layer: 5
   m_Name: Ballista Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 2020279450448134339}
   infoText: {fileID: 3445216546885218452}
---- !u!114 &-7132170617556321137
+--- !u!114 &8152903630651910374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

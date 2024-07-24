@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6516061506482011429}
   - component: {fileID: 2524608605991204871}
   - component: {fileID: 5807395047900998516}
-  - component: {fileID: -4676314617093640868}
+  - component: {fileID: -9162038030930304186}
   m_Layer: 5
   m_Name: Luck Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 7367076845828354849}
   infoText: {fileID: 4768805625250015005}
---- !u!114 &-4676314617093640868
+--- !u!114 &-9162038030930304186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

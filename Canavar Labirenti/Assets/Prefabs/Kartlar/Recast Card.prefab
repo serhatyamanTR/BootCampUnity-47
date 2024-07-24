@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2032719149067356089}
   - component: {fileID: 3974188336025923225}
   - component: {fileID: 5243990802102766952}
-  - component: {fileID: 7502186920095866740}
+  - component: {fileID: 8431474273693242055}
   m_Layer: 5
   m_Name: Recast Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 7839178935549818008}
   infoText: {fileID: 428661265282918574}
---- !u!114 &7502186920095866740
+--- !u!114 &8431474273693242055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

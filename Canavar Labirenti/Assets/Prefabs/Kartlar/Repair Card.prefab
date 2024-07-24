@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7648927932089099280}
   - component: {fileID: 8736152991160705344}
   - component: {fileID: 3340790835066200612}
-  - component: {fileID: 7742675366405428917}
+  - component: {fileID: 3632532717229768615}
   m_Layer: 5
   m_Name: Repair Card
   m_TagString: Untagged
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 1455462361655960384}
   infoText: {fileID: 7202148248036615020}
---- !u!114 &7742675366405428917
+--- !u!114 &3632532717229768615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

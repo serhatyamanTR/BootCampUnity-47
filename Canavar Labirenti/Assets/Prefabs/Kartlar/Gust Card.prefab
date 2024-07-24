@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 6559974732114524256}
   - component: {fileID: 7496838658126803188}
   - component: {fileID: 8711381529336125072}
-  - component: {fileID: -7126632551014452982}
+  - component: {fileID: -276547650954052567}
   m_Layer: 5
   m_Name: Gust Card
   m_TagString: Untagged
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 6911527979767012164}
   infoText: {fileID: 3457264806471810511}
---- !u!114 &-7126632551014452982
+--- !u!114 &-276547650954052567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

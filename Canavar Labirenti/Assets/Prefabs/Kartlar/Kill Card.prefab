@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 5867353881134552342}
   - component: {fileID: 8970880070657491461}
   - component: {fileID: 5454534934888395206}
-  - component: {fileID: -9017675483077922761}
+  - component: {fileID: 5289878336545002382}
   m_Layer: 5
   m_Name: Kill Card
   m_TagString: Untagged
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 4438461529453352428}
   infoText: {fileID: 7861275143979041233}
---- !u!114 &-9017675483077922761
+--- !u!114 &5289878336545002382
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

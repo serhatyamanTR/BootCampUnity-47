@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7070033604349563786}
   - component: {fileID: 532660597876806312}
   - component: {fileID: 3833142116229594602}
-  - component: {fileID: 19611951380790558}
+  - component: {fileID: 975721683156148268}
   m_Layer: 5
   m_Name: Barricade Card
   m_TagString: Untagged
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 5319635666046685809}
   infoText: {fileID: 7605759636185896438}
---- !u!114 &19611951380790558
+--- !u!114 &975721683156148268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 224657680461342030}
   - component: {fileID: 1161103276372539790}
   - component: {fileID: 4695765694160289119}
-  - component: {fileID: -5322719542290361304}
+  - component: {fileID: -8121832222073179030}
   m_Layer: 5
   m_Name: Portal Card
   m_TagString: Untagged
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 3231712760479922698}
   infoText: {fileID: 3116288908273050031}
---- !u!114 &-5322719542290361304
+--- !u!114 &-8121832222073179030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

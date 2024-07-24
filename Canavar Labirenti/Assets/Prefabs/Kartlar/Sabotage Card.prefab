@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7181367125066697234}
   - component: {fileID: 549373607898978651}
   - component: {fileID: 7004470023555779651}
-  - component: {fileID: 6073015680863150400}
+  - component: {fileID: 7973782217890074704}
   m_Layer: 5
   m_Name: Sabotage Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 7911808309468611420}
   infoText: {fileID: 313722237061010476}
---- !u!114 &6073015680863150400
+--- !u!114 &7973782217890074704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

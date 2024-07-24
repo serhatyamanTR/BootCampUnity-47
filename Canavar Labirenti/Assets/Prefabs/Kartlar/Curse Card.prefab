@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1072666983346802783}
   - component: {fileID: 3904792692998910761}
   - component: {fileID: 2863199580831256396}
-  - component: {fileID: 3521779731412798857}
+  - component: {fileID: 3498377901606002848}
   m_Layer: 5
   m_Name: Curse Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 3555457851531680691}
   infoText: {fileID: 1466670219483893918}
---- !u!114 &3521779731412798857
+--- !u!114 &3498377901606002848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

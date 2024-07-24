@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 922978597918467006}
   - component: {fileID: 4950631464850095348}
   - component: {fileID: 4653545348714378383}
-  - component: {fileID: -7096532721080516410}
+  - component: {fileID: 3196444460138275467}
   m_Layer: 5
   m_Name: Freeze Card
   m_TagString: Untagged
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 2185851990022329626}
   infoText: {fileID: 7734356309408713486}
---- !u!114 &-7096532721080516410
+--- !u!114 &3196444460138275467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

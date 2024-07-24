@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 3995645147545392071}
   - component: {fileID: 4130643124342394650}
   - component: {fileID: 803308744554527420}
-  - component: {fileID: -8902277758148431999}
+  - component: {fileID: -1171155766990502339}
   m_Layer: 5
   m_Name: Switch Card
   m_TagString: Untagged
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 783989076888391611}
   infoText: {fileID: 5783891282221903026}
---- !u!114 &-8902277758148431999
+--- !u!114 &-1171155766990502339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

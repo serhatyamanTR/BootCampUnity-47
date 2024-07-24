@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5922816918838920845}
   - component: {fileID: 149108791888399351}
   - component: {fileID: 3467987529551296103}
-  - component: {fileID: -3172779381000787815}
+  - component: {fileID: 7595787973455160566}
   m_Layer: 5
   m_Name: Sightless Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 8153586390387161346}
   infoText: {fileID: 5689046539845687954}
---- !u!114 &-3172779381000787815
+--- !u!114 &7595787973455160566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

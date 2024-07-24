@@ -18,17 +18,16 @@ public class CardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (isDragging) return;
-
-        transform.localScale = originalScale * 1.1f; // Kartý büyüt
-        infoPanel.SetActive(true); // Bilgi panelini göster
-        infoText.text = GetCardInfo(); // Kart bilgilerini güncelle
+        if (!isDragging)
+        {
+            transform.localScale = originalScale * 1.1f; // Kartý büyüt
+            infoPanel.SetActive(true); // Bilgi panelini göster
+            infoText.text = GetCardInfo(); // Kart bilgilerini güncelle
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (isDragging) return;
-
         transform.localScale = originalScale; // Kartý eski boyutuna getir
         infoPanel.SetActive(false); // Bilgi panelini gizle
     }
@@ -36,10 +35,10 @@ public class CardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void SetDragging(bool dragging)
     {
         isDragging = dragging;
-        if (dragging)
+        if (isDragging)
         {
-            transform.localScale = originalScale; // Sürükleme baþladýðýnda kartý eski boyutuna getir
-            infoPanel.SetActive(false); // Sürükleme baþladýðýnda bilgi panelini gizle
+            transform.localScale = originalScale; // Sürükleme sýrasýnda eski boyutuna getir
+            infoPanel.SetActive(false); // Sürükleme sýrasýnda bilgi panelini gizle
         }
     }
 

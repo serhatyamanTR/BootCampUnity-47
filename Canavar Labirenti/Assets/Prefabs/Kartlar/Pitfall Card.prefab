@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6981899479376706634}
   - component: {fileID: 883017502096206941}
   - component: {fileID: 2274120110614083894}
-  - component: {fileID: -1896209533134789680}
+  - component: {fileID: 2847575326632117372}
   m_Layer: 5
   m_Name: Pitfall Card
   m_TagString: Untagged
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 2462397147355078175}
   infoText: {fileID: 8503010937514475431}
---- !u!114 &-1896209533134789680
+--- !u!114 &2847575326632117372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

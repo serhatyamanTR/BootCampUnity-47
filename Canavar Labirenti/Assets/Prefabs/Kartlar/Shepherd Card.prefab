@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7104480304113449912}
   - component: {fileID: 4622954087979846526}
   - component: {fileID: 2240393708201747558}
-  - component: {fileID: -381531191975786386}
+  - component: {fileID: 8816424930077058622}
   m_Layer: 5
   m_Name: Shepherd Card
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 6789905904494699541}
   infoText: {fileID: 1050509370783549453}
---- !u!114 &-381531191975786386
+--- !u!114 &8816424930077058622
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

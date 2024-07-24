@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 5983115238086122576}
   - component: {fileID: 6489358695857085766}
   - component: {fileID: 4223363484952341711}
-  - component: {fileID: 7916633920374685779}
+  - component: {fileID: 3896863490375615443}
   m_Layer: 5
   m_Name: Locksmith Card
   m_TagString: Untagged
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 6796952589977814860}
   infoText: {fileID: 9198775499979491639}
---- !u!114 &7916633920374685779
+--- !u!114 &3896863490375615443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
