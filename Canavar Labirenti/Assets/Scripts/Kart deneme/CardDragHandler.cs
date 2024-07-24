@@ -5,12 +5,24 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 {
     private Vector3 startPosition;
     private Transform originalParent;
+    private Canvas canvas;
+    private CardHover cardHover;
+
+    void Start()
+    {
+        cardHover = GetComponent<CardHover>();
+        canvas = GetComponentInParent<Canvas>();
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         startPosition = transform.position;
         originalParent = transform.parent;
-        transform.SetParent(transform.root); // Canvas'a taþý
+        transform.SetParent(canvas.transform, false); // Canvas'a taþý
+        if (cardHover != null)
+        {
+            cardHover.SetDragging(true); // Sürükleme baþladýðýnda hover efektlerini kapat
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -20,8 +32,6 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // Kartý kullanýlabilir alana býraktýðýmýzý kontrol edin
-        // Eðer geçerli bir yere býrakýlmadýysa, kartý baþlangýç pozisyonuna geri döndür
         if (eventData.pointerEnter != null && eventData.pointerEnter.CompareTag("PlayableArea"))
         {
             // Kartý kullanýlabilir alana býraktýk
@@ -32,6 +42,10 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             transform.position = startPosition; // Baþlangýç pozisyonuna geri dön
             transform.SetParent(originalParent); // Orijinal panele geri taþý
+        }
+        if (cardHover != null)
+        {
+            cardHover.SetDragging(false); // Sürükleme bittiðinde hover efektlerini aç
         }
     }
 }
