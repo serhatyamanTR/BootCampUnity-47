@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8101749440790934075}
   - component: {fileID: 2962057161462948441}
   - component: {fileID: 5003177003205270010}
-  - component: {fileID: 6864262174648697568}
   m_Layer: 5
   m_Name: Slow Card
   m_TagString: Untagged
@@ -38,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 483.80005, y: -133.2}
-  m_SizeDelta: {x: 72.1582, y: 145.6399}
+  m_SizeDelta: {x: 101, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8101749440790934075
 CanvasRenderer:
@@ -92,18 +91,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 6721859096885661144}
   infoText: {fileID: 575592654340384944}
---- !u!114 &6864262174648697568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4241471966523858051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5780fd746645649aa2d29229200fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5410235117237359657
 GameObject:
   m_ObjectHideFlags: 0

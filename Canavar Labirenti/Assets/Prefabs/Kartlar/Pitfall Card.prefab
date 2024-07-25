@@ -224,7 +224,6 @@ GameObject:
   - component: {fileID: 6981899479376706634}
   - component: {fileID: 883017502096206941}
   - component: {fileID: 2274120110614083894}
-  - component: {fileID: 2847575326632117372}
   m_Layer: 5
   m_Name: Pitfall Card
   m_TagString: Untagged
@@ -250,7 +249,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 483.80005, y: -133.2}
-  m_SizeDelta: {x: 72.1582, y: 145.6399}
+  m_SizeDelta: {x: 101, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6981899479376706634
 CanvasRenderer:
@@ -304,15 +303,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 2462397147355078175}
   infoText: {fileID: 8503010937514475431}
---- !u!114 &2847575326632117372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9176837299187008073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5780fd746645649aa2d29229200fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

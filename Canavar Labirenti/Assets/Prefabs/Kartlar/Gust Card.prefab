@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 6559974732114524256}
   - component: {fileID: 7496838658126803188}
   - component: {fileID: 8711381529336125072}
-  - component: {fileID: -276547650954052567}
   m_Layer: 5
   m_Name: Gust Card
   m_TagString: Untagged
@@ -174,7 +173,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 483.80005, y: -133.2}
-  m_SizeDelta: {x: 72.1582, y: 145.6399}
+  m_SizeDelta: {x: 101, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6559974732114524256
 CanvasRenderer:
@@ -228,18 +227,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 6911527979767012164}
   infoText: {fileID: 3457264806471810511}
---- !u!114 &-276547650954052567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5979881661376642375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5780fd746645649aa2d29229200fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6911527979767012164
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2032719149067356089}
   - component: {fileID: 3974188336025923225}
   - component: {fileID: 5243990802102766952}
-  - component: {fileID: 8431474273693242055}
   m_Layer: 5
   m_Name: Recast Card
   m_TagString: Untagged
@@ -38,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 483.80005, y: -133.2}
-  m_SizeDelta: {x: 72.1582, y: 145.6399}
+  m_SizeDelta: {x: 101, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2032719149067356089
 CanvasRenderer:
@@ -92,18 +91,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 7839178935549818008}
   infoText: {fileID: 428661265282918574}
---- !u!114 &8431474273693242055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4979063215973686561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5780fd746645649aa2d29229200fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7839178935549818008
 GameObject:
   m_ObjectHideFlags: 0

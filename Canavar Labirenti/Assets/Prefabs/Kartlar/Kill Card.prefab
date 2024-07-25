@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 5867353881134552342}
   - component: {fileID: 8970880070657491461}
   - component: {fileID: 5454534934888395206}
-  - component: {fileID: 5289878336545002382}
   m_Layer: 5
   m_Name: Kill Card
   m_TagString: Untagged
@@ -174,7 +173,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 483.80005, y: -133.2}
-  m_SizeDelta: {x: 72.1582, y: 145.6399}
+  m_SizeDelta: {x: 101, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5867353881134552342
 CanvasRenderer:
@@ -228,18 +227,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 4438461529453352428}
   infoText: {fileID: 7861275143979041233}
---- !u!114 &5289878336545002382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3486801767988053155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5780fd746645649aa2d29229200fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4438461529453352428
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5460850616440992519}
   - component: {fileID: 1948392976580413048}
   - component: {fileID: 7426099702447448344}
-  - component: {fileID: 7304921160632919619}
   m_Layer: 5
   m_Name: Dash Card
   m_TagString: Untagged
@@ -38,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 483.80005, y: -133.2}
-  m_SizeDelta: {x: 72.1582, y: 145.6399}
+  m_SizeDelta: {x: 101, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5460850616440992519
 CanvasRenderer:
@@ -92,18 +91,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 7558651563841437116}
   infoText: {fileID: 3999418280394543197}
---- !u!114 &7304921160632919619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682320339981697854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5780fd746645649aa2d29229200fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7558651563841437116
 GameObject:
   m_ObjectHideFlags: 0

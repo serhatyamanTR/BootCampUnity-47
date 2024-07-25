@@ -9,16 +9,18 @@ public class CardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     private Vector3 originalScale;
     private bool isDragging = false;
+    private Transform handPanel;
 
     void Start()
     {
         originalScale = transform.localScale;
         infoPanel.SetActive(false);
+        handPanel = GameObject.FindGameObjectWithTag("HandPanel").transform;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!isDragging)
+        if (!isDragging && transform.parent == handPanel)
         {
             transform.localScale = originalScale * 1.1f; // Kartý büyüt
             infoPanel.SetActive(true); // Bilgi panelini göster
@@ -30,16 +32,6 @@ public class CardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         transform.localScale = originalScale; // Kartý eski boyutuna getir
         infoPanel.SetActive(false); // Bilgi panelini gizle
-    }
-
-    public void SetDragging(bool dragging)
-    {
-        isDragging = dragging;
-        if (isDragging)
-        {
-            transform.localScale = originalScale; // Sürükleme sýrasýnda eski boyutuna getir
-            infoPanel.SetActive(false); // Sürükleme sýrasýnda bilgi panelini gizle
-        }
     }
 
     string GetCardInfo()

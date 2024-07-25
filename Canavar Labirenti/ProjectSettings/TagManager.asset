@@ -10,6 +10,7 @@ TagManager:
   - zemin
   - PlayableArea
   - DeckPanel
+  - HandPanel
   layers:
   - Default
   - TransparentFX

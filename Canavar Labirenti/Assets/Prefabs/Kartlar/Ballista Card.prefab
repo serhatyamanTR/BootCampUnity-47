@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1792271849079962660}
   - component: {fileID: 535686096270282373}
   - component: {fileID: 1471153220374596003}
-  - component: {fileID: 8152903630651910374}
   m_Layer: 5
   m_Name: Ballista Card
   m_TagString: Untagged
@@ -38,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 483.80005, y: -133.2}
-  m_SizeDelta: {x: 72.1582, y: 145.6399}
+  m_SizeDelta: {x: 101, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1792271849079962660
 CanvasRenderer:
@@ -92,18 +91,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 2020279450448134339}
   infoText: {fileID: 3445216546885218452}
---- !u!114 &8152903630651910374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234555473835269060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5780fd746645649aa2d29229200fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2020279450448134339
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6516061506482011429}
   - component: {fileID: 2524608605991204871}
   - component: {fileID: 5807395047900998516}
-  - component: {fileID: -9162038030930304186}
   m_Layer: 5
   m_Name: Luck Card
   m_TagString: Untagged
@@ -38,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 483.80005, y: -133.2}
-  m_SizeDelta: {x: 72.1582, y: 145.6399}
+  m_SizeDelta: {x: 101, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6516061506482011429
 CanvasRenderer:
@@ -92,18 +91,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 7367076845828354849}
   infoText: {fileID: 4768805625250015005}
---- !u!114 &-9162038030930304186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136804845114012208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5780fd746645649aa2d29229200fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7367076845828354849
 GameObject:
   m_ObjectHideFlags: 0
