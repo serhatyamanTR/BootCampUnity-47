@@ -34,7 +34,7 @@ public class DeckManager : MonoBehaviour
         {
             GameObject randomCardPrefab = GetRandomCardPrefab();
             GameObject newCard = Instantiate(randomCardPrefab, deckPanel);
-            newCard.name = "Card " + (i + 1);
+            newCard.name = randomCardPrefab.name; // Ýsimlendirme
             newCard.AddComponent<CardClickHandler>(); // Kartlara týklama özelliði ekle
             newCard.GetComponent<CardClickHandler>().SetDeckManager(this); // DeckManager referansýný ayarla
             deck.Add(newCard);
@@ -51,16 +51,29 @@ public class DeckManager : MonoBehaviour
         int randomIndex = Random.Range(0, 100);
         if (randomIndex < 5)
         {
-            // %5 ihtimalle
-            return cardPrefabs[Random.Range(0, 5)];
+            // %5 ihtimalle "EN EN EN Nadir" kartlar (0-1)
+            return cardPrefabs[Random.Range(0, 2)];
         }
-        else if (randomIndex < 20)
+        else if (randomIndex < 15)
         {
-            // %15 ihtimalle
-            return cardPrefabs[Random.Range(5, 10)];
+            // %10 ihtimalle "En Nadir" kartlar (2-3)
+            return cardPrefabs[Random.Range(2, 4)];
         }
-        // Diðer kartlar için daha fazla olasýlýk ekleyebilirsiniz
-        return cardPrefabs[Random.Range(10, cardPrefabs.Count)];
+        else if (randomIndex < 35)
+        {
+            // %20 ihtimalle "Ender" kartlar (4-11)
+            return cardPrefabs[Random.Range(4, 12)];
+        }
+        else if (randomIndex < 65)
+        {
+            // %30 ihtimalle "Ortalama" kartlar (12-18)
+            return cardPrefabs[Random.Range(12, 19)];
+        }
+        else
+        {
+            // %40 ihtimalle "Normal" kartlar (19-29)
+            return cardPrefabs[Random.Range(19, cardPrefabs.Count)];
+        }
     }
 
     void DealStartingHand()
