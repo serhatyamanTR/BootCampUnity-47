@@ -21,12 +21,12 @@ public class Card_State_script : MonoBehaviour
     public  int cardActiveRoundCount;
     public int cardActiveRoundRemain;
     public GameObject CardPrefab;
-    public MonoBehaviour CardScript;
+    public MonoScript CardSpecialScript;
     public float AnimationSpeed;
     // Start is called before the first frame update
     void Start()
         {
-            CardScript = CardPrefab.GetComponent<MonoBehaviour>(); // Kartın scriptini al
+            //CardSpecialScript = CardPrefab.GetComponent<MonoScript>(); // Kartın scriptini al
         }
 
     // Update is called once per frame
@@ -58,35 +58,52 @@ public class Card_State_script : MonoBehaviour
 
                 case Card_State.inGame:
                     {
-                        isCardPlayed    =   true;
                         isCardActive    =   true;
+                        isCardPlayed    =   false;
+                       
 
-                        if (CardScript != null)
-                            {
-                                var CardSpecialEffect = CardScript.GetType().GetMethod("CardSpecialEffect");
-                                if (CardSpecialEffect != null)
-                                    {
-                                        CardSpecialEffect.Invoke(CardScript, null);
-                                        
-                                    }
-                            }
+
                     }
                     break;
 
                 case Card_State.inGrave:
                     {
                         MoveCardToPanel(CardPrefab, graveYardPanel);
-                        if (CardScript != null)
+                        if (CardSpecialScript != null)
                             {
-                                var CardOutEffect = CardScript.GetType().GetMethod("CardOutEffect");
+                                var CardOutEffect = CardSpecialScript.GetType().GetMethod("CardOutEffect");
                                 if (CardOutEffect != null)
                                     {
-                                        CardOutEffect.Invoke(CardScript, null);
+                                        CardOutEffect.Invoke(CardSpecialScript, null);
                                     }
                             }
                     }
                     break;
                 }            
+        }
+    void OnMouseDown()
+        {
+            Debug.Log("OnmouseDown çalıştı");
+            if (isCardActive &&!isCardPlayed)
+                {
+                    if (CardSpecialScript != null)
+                        {
+                            var CardSpecialEffect = CardSpecialScript.GetType().GetMethod("CardSpecialEffect");
+                            if (CardSpecialEffect != null)
+                                    {
+                                        CardSpecialEffect.Invoke(CardSpecialScript, null);
+
+                                    }
+                                else
+                                    {
+                                        Debug.LogWarning("Katın özel efekti yok");
+                                    }
+                        }
+                        else
+                            {
+                                Debug.LogWarning("Katın özel scripti yok");
+                            }
+                }
         }
     IEnumerator MoveCardToPanel(GameObject card, Transform hedefPanel)
         {

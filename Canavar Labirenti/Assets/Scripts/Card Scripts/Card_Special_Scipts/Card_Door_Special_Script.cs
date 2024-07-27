@@ -6,7 +6,7 @@ public class Card_Door_Special_Script : MonoBehaviour
     {
         public Selection_Point_interact selection_Point_Interact;
         public Card_State_script card_State_script;
-        public GameObject CardSpecialObjectPrefab;
+        public GameObject CardSpecialObject;
         public float gate_anim_speed;
         // Start is called before the first frame update
         void Start()
@@ -19,11 +19,12 @@ public class Card_Door_Special_Script : MonoBehaviour
 
         public void CardSpecialEffect()
             {
-                Instantiate(CardSpecialObjectPrefab, selection_Point_Interact.selectedObjectTransform);
+                Instantiate(CardSpecialObject, selection_Point_Interact.selectedObjectTransform);
             }
 
-        public void CardOutEffect(GameObject gameObject)
+        public void CardOutEffect()
             {
-                CardSpecialObjectPrefab.transform.Translate(CardSpecialObjectPrefab.transform.up*gate_anim_speed*Time.deltaTime);
+                CardSpecialObject.transform.Translate(CardSpecialObject.transform.up*gate_anim_speed*Time.deltaTime);
+                Destroy ( CardSpecialObject, 2f);
             }
     }
