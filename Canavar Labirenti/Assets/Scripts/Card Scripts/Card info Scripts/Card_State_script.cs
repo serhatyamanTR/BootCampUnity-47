@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -68,6 +67,7 @@ public class Card_State_script : MonoBehaviour
                                 if (CardSpecialEffect != null)
                                     {
                                         CardSpecialEffect.Invoke(CardScript, null);
+                                        
                                     }
                             }
                     }

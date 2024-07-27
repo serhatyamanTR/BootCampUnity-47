@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class basllista_bullet_object_script : MonoBehaviour
@@ -21,7 +20,7 @@ public class basllista_bullet_object_script : MonoBehaviour
             if (collision.collider.CompareTag("monster"))
                 {
                     Debug.Log("Canavar Vuruldu");
- 
+    
                     Destroy(collision.gameObject, 1f);
                 }
         }

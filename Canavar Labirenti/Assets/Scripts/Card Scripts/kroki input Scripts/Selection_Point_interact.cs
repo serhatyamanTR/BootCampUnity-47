@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Selection_Point_interact : MonoBehaviour
@@ -13,7 +12,7 @@ public class Selection_Point_interact : MonoBehaviour
     private Vector3 baseScale;
     private Renderer lastSelectedRenderer;
     public Transform selectedObjectTransform;
-    public bool isObjectSelected;
+    public bool isObjectSelected = false;
 
     private Cam_Kroki_script cam_Kroki_Script;
 
