@@ -35,6 +35,7 @@ public class Card_Ballista_Special_Script : MonoBehaviour
     void CardOutEffect()
         {
             CardSpecialObject.GetComponent<Renderer>().material.color = Color.red;
+            CardSpecialObject.transform.Translate(CardSpecialObject.transform.up*Time.deltaTime);
             Destroy(CardSpecialObject , 2f);
         }
 }
