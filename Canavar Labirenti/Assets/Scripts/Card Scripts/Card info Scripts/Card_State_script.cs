@@ -105,6 +105,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                         //Instantiate(gameObject, deckPanel.transform);
                         infoPanel = transform.GetChild(0).gameObject;
                         infoPanel.SetActive(false);
+                        gameObject.transform.localPosition = Vector3.zero;
                         //deckList.Add(gameObject);
                         Debug.Log(gameObject + " Desteye eklendi");
                         
@@ -117,9 +118,10 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                 case Card_State.inHand:
                     {
                         isCardinHand    =   true;
-                        handList.Add(gameObject);
-                        deckList.Remove(gameObject);
+                        //handList.Add(gameObject);
+                        //deckList.Remove(gameObject);
                         StartCoroutine(MoveCardToPanel(gameObject, handPanel.transform));
+                        gameObject.transform.localPosition = Vector3.zero;
                         cardActiveRoundRemain = cardActiveRoundCount;
                         
 
@@ -129,6 +131,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                 case Card_State.inGame:
                     {
                         StartCoroutine(MoveCardToPanel(gameObject, inGamePanel));
+                        gameObject.transform.localPosition = Vector3.zero;
                         deckManager_Script.handList.Remove(gameObject);
                         isCardinHand    =   false;
                         isCardActive    =   true;
@@ -144,6 +147,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                     {
 
                         StartCoroutine(MoveCardToPanel(gameObject, gravePanel));
+                        gameObject.transform.localPosition = Vector3.zero;
                         if (CardSpecialScript != null)
                             {
                                 var CardOutEffect = CardSpecialScript.GetType().GetMethod("CardOutEffect");
@@ -211,14 +215,17 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
         }
     public void OnPointerClick(PointerEventData eventData)
         {
+            Debug.Log("Tıklanan Kart = " + gameObject.name);
             infoPanel.SetActive(false);
 
             if ( isCardinHand && eventData.button == PointerEventData.InputButton.Right)
                 {
+                    Debug.Log("karta SAĞ tıklandı = " + gameObject.name);
                     SetState(Card_State.inGame);
 
                     if (isCardActive &&!isCardPlayed)
                         {
+                            Debug.Log("Kart Oynandı = " + gameObject.name);
                             if (CardSpecialScript != null)
                                 {
                                     var CardSpecialEffect = CardSpecialScript.GetType().GetMethod("CardSpecialEffect");
@@ -243,8 +250,10 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
         {
             if (isCardinHand)
                 {
+                    Debug.Log("Kart Elde ve  Sürüklenmeye çalışıldı= " + gameObject.name);
                     if (eventData.button == PointerEventData.InputButton.Left)
                         {
+                            Debug.Log("Kart Sol tuşla sürükleniyor = " + gameObject.name);
                             isDragging = true;
                             parentAfterDrag = transform.parent;
                             transform.SetParent(transform.root);
@@ -252,6 +261,10 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                             tempImage.raycastTarget = false;
                         }
                 }
+                else
+                    {
+                        Debug.Log("Kart Sürüklenmeye çalışıldı ama kart elde değil = " + gameObject.name);
+                    }
         }    
     
     public void OnDrag(PointerEventData eventData)
@@ -267,6 +280,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
         {
             if (isDragging)
                 {
+                    Debug.Log ("Sürükleme Bitti =  " + gameObject.name);
                     isDragging = false;
                     transform.SetParent(parentAfterDrag);
                     tempImage.raycastTarget = true;

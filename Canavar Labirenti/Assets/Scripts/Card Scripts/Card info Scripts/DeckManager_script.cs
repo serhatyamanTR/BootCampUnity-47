@@ -24,7 +24,7 @@ public class DeckManager_script : MonoBehaviour
 
 /*-------------------------------------------------------------------------*/
 
-    public bool isTurnPlayer1 =true;
+    public bool isTurnPlayer1;
 
     public TextMeshProUGUI deckCountText; // Deste say�s�n� g�steren text
     public TextMeshProUGUI playedCardsText; // Oynanan kartlar� g�steren text
@@ -37,7 +37,7 @@ public class DeckManager_script : MonoBehaviour
 
     void Start()
     {
-        isTurnPlayer1 = false;
+        isTurnPlayer1 = true;
         if (deckPanel == null || handPanel == null || inGamePanel == null || gravePanel == null)
             {
                 Debug.LogError("Panel referanslarından biri veya birkaçı atanmadı!");
@@ -143,6 +143,8 @@ public class DeckManager_script : MonoBehaviour
             {
                 drawnCard.GetComponent<Card_State_script>().SetState(Card_State.inHand);
                 //StartCoroutine(MoveCardToHand(drawnCard));
+                handList.Add(gameObject);
+                deckList.Remove(gameObject);
                 drawCount++;
                 //UpdateDeckCount();
                 Debug.Log(drawnCard.name + " elde");
