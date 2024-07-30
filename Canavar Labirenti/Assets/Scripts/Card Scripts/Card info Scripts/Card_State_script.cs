@@ -19,6 +19,19 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
 {
     public DeckManager_script deckManager_Script;
 
+
+/*  ------------------    Paneller ve Listeleri ----------------------*/
+    private Transform deckPanel; // Deste paneli
+    private List<GameObject> deckList; // Deste kartrivate
+    private Transform handPanel; // El paneli
+    private List<GameObject> handList; // Elde bulunan karrivate
+    private Transform inGamePanel;
+    private List<GameObject> inGameList;
+    private Transform gravePanel; // Mezar paneli
+    private List<GameObject> graveList;
+
+/*-------------------------------------------------------------------------*/
+
     public String cardSpellTag;
     public bool isCardPlayed    =   false;
     public bool isCardActive    =   false;
@@ -43,8 +56,27 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
     // Start is called before the first frame update
     void Start()
         {
+
             //CardPrefab = transform.gameObject;
             originalScale = transform.localScale;
+            deckManager_Script = FindAnyObjectByType<DeckManager_script>();
+            deckPanel = deckManager_Script.deckPanel;
+            handPanel = deckManager_Script.handPanel;
+            inGamePanel = deckManager_Script.inGamePanel;
+            gravePanel = deckManager_Script.gravePanel;
+
+            deckList = deckManager_Script.deckList;
+            handList = deckManager_Script.handList;
+            inGameList = deckManager_Script.inGameList;
+            graveList = deckManager_Script.graveList;
+
+            /*
+            if (deckManager_Script == null)
+                {
+                    Debug.LogError("DeckManager_script referansı bulunamadı!");
+                }
+            */
+
 
         }
 
@@ -56,6 +88,13 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
 
     public void SetState(Card_State state)
         {
+            /*
+            if (deckManager_Script == null)
+                {
+                    Debug.LogError("DeckManager_script referansı atanmadı!");
+                    return;
+                }
+            */
             switch(state)
                 {
                  case Card_State.inDeck:
@@ -63,8 +102,10 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                         isCardinHand    =   false;
                         isCardActive    =   false;
                         isCardPlayed    =   false;
-                        Instantiate(gameObject, deckManager_Script.deckPanel);
-                        deckManager_Script.deckList.Add(gameObject);
+                        //Instantiate(gameObject, deckPanel.transform);
+                        infoPanel = transform.GetChild(0).gameObject;
+                        infoPanel.SetActive(false);
+                        //deckList.Add(gameObject);
                         Debug.Log(gameObject + " Desteye eklendi");
                         
                         
@@ -76,17 +117,18 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                 case Card_State.inHand:
                     {
                         isCardinHand    =   true;
-                        deckManager_Script.handList.Add(gameObject);
-                        deckManager_Script.deckList.Remove(gameObject);
-                        StartCoroutine(MoveCardToPanel(gameObject, deckManager_Script.handPanel));
+                        handList.Add(gameObject);
+                        deckList.Remove(gameObject);
+                        StartCoroutine(MoveCardToPanel(gameObject, handPanel.transform));
                         cardActiveRoundRemain = cardActiveRoundCount;
+                        
 
                     }
                     break;
 
                 case Card_State.inGame:
                     {
-                        StartCoroutine(MoveCardToPanel(gameObject, deckManager_Script.inGamePanel));
+                        StartCoroutine(MoveCardToPanel(gameObject, inGamePanel));
                         deckManager_Script.handList.Remove(gameObject);
                         isCardinHand    =   false;
                         isCardActive    =   true;
@@ -101,7 +143,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                 case Card_State.inGrave:
                     {
 
-                        StartCoroutine(MoveCardToPanel(gameObject, deckManager_Script.gravePanel));
+                        StartCoroutine(MoveCardToPanel(gameObject, gravePanel));
                         if (CardSpecialScript != null)
                             {
                                 var CardOutEffect = CardSpecialScript.GetType().GetMethod("CardOutEffect");
@@ -117,27 +159,10 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
     void OnMouseDown()
         {
             Debug.Log("OnmouseDown çalıştı");
-            if (isCardActive &&!isCardPlayed)
-                {
-                    if (CardSpecialScript != null)
-                        {
-                            var CardSpecialEffect = CardSpecialScript.GetType().GetMethod("CardSpecialEffect");
 
-                            if (CardSpecialEffect != null)
-                                    {
-                                        CardSpecialEffect.Invoke(CardSpecialScript, null);
-                                    }
-                                else
-                                    {
-                                        Debug.LogWarning("Katın özel efekti yok");
-                                    }
-                        }
-                    else
-                        {
-                            Debug.LogWarning("Katın özel scripti yok");
-                        }
-                }
         }
+
+
     IEnumerator MoveCardToPanel(GameObject card, Transform hedefPanel)
         {
             Vector3 startPos = card.transform.position;
@@ -155,6 +180,8 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
             card.transform.SetParent(hedefPanel);
             card.transform.localPosition = Vector3.zero;
         }
+
+
 
     public void OnPointerEnter(PointerEventData eventData)
         { 
@@ -189,23 +216,47 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
             if ( isCardinHand && eventData.button == PointerEventData.InputButton.Right)
                 {
                     SetState(Card_State.inGame);
+
+                    if (isCardActive &&!isCardPlayed)
+                        {
+                            if (CardSpecialScript != null)
+                                {
+                                    var CardSpecialEffect = CardSpecialScript.GetType().GetMethod("CardSpecialEffect");
+
+                                    if (CardSpecialEffect != null)
+                                            {
+                                                CardSpecialEffect.Invoke(CardSpecialScript, null);
+                                            }
+                                        else
+                                            {
+                                                Debug.LogWarning("Katın özel efekti yok");
+                                            }
+                                }
+                            else
+                                {
+                                    Debug.LogWarning("Katın özel scripti yok");
+                                }
+                        }
                 }
         }
     public void OnBeginDrag(PointerEventData eventData)
         {
-            if (eventData.button == PointerEventData.InputButton.Left)
+            if (isCardinHand)
                 {
-                    isDragging = true;
-                    parentAfterDrag = transform.parent;
-                    transform.SetParent(transform.root);
-                    transform.SetAsLastSibling();
-                    tempImage.raycastTarget = false;
+                    if (eventData.button == PointerEventData.InputButton.Left)
+                        {
+                            isDragging = true;
+                            parentAfterDrag = transform.parent;
+                            transform.SetParent(transform.root);
+                            transform.SetAsLastSibling();
+                            tempImage.raycastTarget = false;
+                        }
                 }
         }    
     
     public void OnDrag(PointerEventData eventData)
         { 
-            if (eventData.button == PointerEventData.InputButton.Left)
+            if (isDragging  &&  eventData.button == PointerEventData.InputButton.Left)
             {
 
                 gameObject.transform.Translate(Input.mousePosition - gameObject.transform.position);
@@ -214,9 +265,12 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
 
     public void OnEndDrag(PointerEventData eventData)
         {
-            isDragging = false;
-            transform.SetParent(parentAfterDrag);
-            tempImage.raycastTarget = true;
+            if (isDragging)
+                {
+                    isDragging = false;
+                    transform.SetParent(parentAfterDrag);
+                    tempImage.raycastTarget = true;
+                }
         }
 
 

@@ -20,9 +20,11 @@ public class DeckManager_script : MonoBehaviour
     public List<GameObject> inGameList;
 
     public Transform gravePanel; // Mezar paneli
-    private List<GameObject> graveList;
+    public List<GameObject> graveList;
 
 /*-------------------------------------------------------------------------*/
+
+    public bool isTurnPlayer1 =true;
 
     public TextMeshProUGUI deckCountText; // Deste say�s�n� g�steren text
     public TextMeshProUGUI playedCardsText; // Oynanan kartlar� g�steren text
@@ -35,22 +37,35 @@ public class DeckManager_script : MonoBehaviour
 
     void Start()
     {
+        isTurnPlayer1 = false;
+        if (deckPanel == null || handPanel == null || inGamePanel == null || gravePanel == null)
+            {
+                Debug.LogError("Panel referanslarından biri veya birkaçı atanmadı!");
+                return;
+            }
         InitializeDeck();
-        DealStartingHand();
-       UpdateDeckCount();
+        if  (isTurnPlayer1)
+            {
+                DealStartingHand();
+            }
+       //UpdateDeckCount();
     }
 
     void InitializeDeck()
     {
+        
+
+
         for (int i = 0; i < 30; i++)
         {
             GameObject randomCardPrefab = GetRandomCardPrefab();
-            randomCardPrefab.GetComponent<Card_State_script>().SetState(Card_State.inDeck); //card statetini desteye çektim
-            // GameObject newCard = Instantiate(randomCardPrefab, deckPanel);
-            // newCard.name = randomCardPrefab.name; // �simlendirme
+            
+            GameObject newCard = Instantiate(randomCardPrefab, deckPanel);
+            newCard.name = randomCardPrefab.name; // �simlendirme
+            newCard.GetComponent<Card_State_script>().SetState(Card_State.inDeck); //card statetini desteye çektim
             // newCard.AddComponent<CardClickHandler>(); // Kartlara t�klama �zelli�i ekle
             // newCard.GetComponent<CardClickHandler>().SetDeckManager(this); // DeckManager referans�n� ayarla
-            //deckList.Add(newCard);
+            deckList.Add(newCard);
             //Debug.Log(newCard.name + " destede");
 
             // Kart arka y�z�n� ekle
@@ -59,6 +74,11 @@ public class DeckManager_script : MonoBehaviour
             cardBack.transform.localPosition = Vector3.zero;
             */
         }
+        if (deckPanel == null || cardPrefabs == null || cardPrefabs.Count == 0)
+            {
+                Debug.LogError("DeckPanel veya CardPrefabs referansı atanmadı!");
+                return;
+            }
     }
 
     GameObject GetRandomCardPrefab()
@@ -96,6 +116,14 @@ public class DeckManager_script : MonoBehaviour
     {
         StartCoroutine(DealCardsCoroutine());
     }
+
+    void DealHandReload()
+        {
+            if (isTurnPlayer1 && handList.Count == 0)
+                {
+                    DealCardsCoroutine();
+                }    
+        }
 
     IEnumerator DealCardsCoroutine()
     {
