@@ -101,7 +101,7 @@ MonoBehaviour:
   cardActiveRoundRemain: 0
   infoPanel: {fileID: 2020279450448134339}
   CardSpecialScript: {fileID: 0}
-  cardsAnimationSpeed: 0
+  cardsAnimationSpeed: 1
   inCardPointerTimer: 2
 --- !u!1 &2020279450448134339
 GameObject:

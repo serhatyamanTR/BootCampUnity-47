@@ -23,7 +23,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
 /*  ------------------    Paneller ve Listeleri ----------------------*/
     private Transform deckPanel; // Deste paneli
     private List<GameObject> deckList; // Deste kartrivate
-    private Transform handPanel; // El paneli
+    private static Transform handPanel; // El paneli
     private List<GameObject> handList; // Elde bulunan karrivate
     private Transform inGamePanel;
     private List<GameObject> inGameList;
@@ -59,23 +59,54 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
 
             //CardPrefab = transform.gameObject;
             originalScale = transform.localScale;
-            deckManager_Script = FindAnyObjectByType<DeckManager_script>();
-            deckPanel = deckManager_Script.deckPanel;
-            handPanel = deckManager_Script.handPanel;
-            inGamePanel = deckManager_Script.inGamePanel;
-            gravePanel = deckManager_Script.gravePanel;
+            deckManager_Script = GameObject.Find("DeckManagerPanel").GetComponent<DeckManager_script>();
+            deckPanel   = GameObject.Find("DeckPanel").transform;
+            handPanel   = GameObject.Find("HandPanel").transform;
+            inGamePanel = GameObject.Find("inGamePanel").transform;
+            gravePanel  = GameObject.Find("GravePanel").transform;
 
             deckList = deckManager_Script.deckList;
             handList = deckManager_Script.handList;
             inGameList = deckManager_Script.inGameList;
             graveList = deckManager_Script.graveList;
-
-            /*
-            if (deckManager_Script == null)
+//---------------------Component kontrolü   -----------------------------------//
+            if (deckPanel == null)
                 {
-                    Debug.LogError("DeckManager_script referansı bulunamadı!");
+                    Debug.LogError("deckPanel referansı bulunamadı!");
                 }
-            */
+            if (deckList == null)
+                {
+                    Debug.LogError("deckList referansı bulunamadı!");
+                }
+            if (handPanel == null)
+                {
+                    Debug.LogError("handPanel referansı bulunamadı!");
+                }
+            if (handList == null)
+                {
+                    Debug.LogError("handList referansı bulunamadı!");
+                }
+            if (inGamePanel == null)
+                {
+                    Debug.LogError("inGamePanel referansı bulunamadı!");
+                }
+            if (inGamePanel == null)
+                {
+                    Debug.LogError("inGamePanel referansı bulunamadı!");
+                }
+            if (inGameList == null)
+                {
+                    Debug.LogError("inGameList referansı bulunamadı!");
+                }
+            if (gravePanel == null)
+                {
+                    Debug.LogError("gravePanel referansı bulunamadı!");
+                }
+            if (graveList == null)
+            {
+                Debug.LogError("graveList referansı bulunamadı!");
+            }
+//-----------------------------------------------------------------------------------//
 
 
         }
@@ -120,7 +151,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                         isCardinHand    =   true;
                         //handList.Add(gameObject);
                         //deckList.Remove(gameObject);
-                        StartCoroutine(MoveCardToPanel(gameObject, handPanel.transform));
+                        StartCoroutine(MoveCardToPanel(gameObject, handPanel));
                         gameObject.transform.localPosition = Vector3.zero;
                         cardActiveRoundRemain = cardActiveRoundCount;
                         
@@ -247,45 +278,58 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                 }
         }
     public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (isCardinHand && eventData.button == PointerEventData.InputButton.Left)
         {
-            if (isCardinHand)
-                {
-                    Debug.Log("Kart Elde ve  Sürüklenmeye çalışıldı= " + gameObject.name);
-                    if (eventData.button == PointerEventData.InputButton.Left)
-                        {
-                            Debug.Log("Kart Sol tuşla sürükleniyor = " + gameObject.name);
-                            isDragging = true;
-                            parentAfterDrag = transform.parent;
-                            transform.SetParent(transform.root);
-                            transform.SetAsLastSibling();
-                            tempImage.raycastTarget = false;
-                        }
-                }
-                else
-                    {
-                        Debug.Log("Kart Sürüklenmeye çalışıldı ama kart elde değil = " + gameObject.name);
-                    }
-        }    
-    
-    public void OnDrag(PointerEventData eventData)
-        { 
-            if (isDragging  &&  eventData.button == PointerEventData.InputButton.Left)
-            {
-
-                gameObject.transform.Translate(Input.mousePosition - gameObject.transform.position);
-            }
+            Debug.Log("Kart Elde ve Sürüklenmeye çalışıldı = " + gameObject.name);
+            isDragging = true;
+            parentAfterDrag = transform.parent;
+            transform.SetParent(transform.root); // Orman yapısına taşınma
+            transform.SetAsLastSibling(); // En üstte görünmesini sağlar
+            tempImage = GetComponent<Image>();
+            tempImage.raycastTarget = false;
         }
+        else
+        {
+            Debug.Log("Kart Sürüklenmeye çalışıldı ama kart elde değil = " + gameObject.name);
+        }
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (isDragging && eventData.button == PointerEventData.InputButton.Left)
+        {
+            Vector2 localPointerPosition;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle
+                (
+                    (RectTransform)transform.parent,
+                    eventData.position,
+                    eventData.enterEventCamera,
+                    out localPointerPosition
+                );
+            transform.localPosition = localPointerPosition;
+            
+            Debug.Log("Anlık mouse input lokasyonu = " + Input.mousePosition);
+            Debug.Log("Anlık mouse eventdataposition lokasyonu = " + eventData.position);
+            Debug.Log("Anlık localposition lokasyonu = " + transform.localPosition);
+            Debug.Log(gameObject.name + " kartının anlık lokasyonu = " + transform.position);
+            Debug.Log("Card Anlık Parenti = " + transform.parent.gameObject.name);
+        }
+    }
 
     public void OnEndDrag(PointerEventData eventData)
+    {
+        if (isDragging)
         {
-            if (isDragging)
-                {
-                    Debug.Log ("Sürükleme Bitti =  " + gameObject.name);
-                    isDragging = false;
-                    transform.SetParent(parentAfterDrag);
-                    tempImage.raycastTarget = true;
-                }
+            Debug.Log("Sürükleme Bitti = " + gameObject.name);
+            isDragging = false;
+            transform.SetParent(parentAfterDrag);
+            tempImage = GetComponent<Image>();
+            tempImage.raycastTarget = true;
         }
+    }
+
+    
 
 
 }

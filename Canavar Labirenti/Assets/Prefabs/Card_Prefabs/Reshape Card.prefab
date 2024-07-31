@@ -313,5 +313,5 @@ MonoBehaviour:
   cardActiveRoundRemain: 0
   infoPanel: {fileID: 739748266718068649}
   CardSpecialScript: {fileID: 0}
-  cardsAnimationSpeed: 0
+  cardsAnimationSpeed: 1
   inCardPointerTimer: 2

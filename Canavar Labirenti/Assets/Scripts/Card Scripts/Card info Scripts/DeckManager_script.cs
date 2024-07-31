@@ -9,6 +9,8 @@ public class DeckManager_script : MonoBehaviour
 {
     public List<GameObject> cardPrefabs; // Kart prefablar� listesi
 
+    //public Card_State_script card_State_Script;
+
 /*  ------------------    Paneller ve Listeleri ----------------------*/
     public Transform deckPanel; // Deste paneli
     public List<GameObject> deckList; // Deste kartlar�
@@ -44,12 +46,13 @@ public class DeckManager_script : MonoBehaviour
                 return;
             }
         InitializeDeck();
-        if  (isTurnPlayer1)
-            {
-                DealStartingHand();
-            }
+        DealStartingHand();
        //UpdateDeckCount();
     }
+    void Update()
+        {
+            DealHandReload();
+        }
 
     void InitializeDeck()
     {
@@ -114,7 +117,7 @@ public class DeckManager_script : MonoBehaviour
 
     void DealStartingHand()
     {
-        StartCoroutine(DealCardsCoroutine());
+            StartCoroutine(DealCardsCoroutine());
     }
 
     void DealHandReload()
@@ -130,7 +133,7 @@ public class DeckManager_script : MonoBehaviour
         for (int i = 0; i < 5; i++)
             {
                 DrawCard();
-                yield return new WaitForSeconds(0.5f); // Animasyon s�resi
+                yield return new WaitForSeconds(0.1f); // Animasyon s�resi
             }
     }
 
@@ -141,10 +144,11 @@ public class DeckManager_script : MonoBehaviour
             GameObject drawnCard = GetUniqueCard();
             if (drawnCard != null)
             {
+
                 drawnCard.GetComponent<Card_State_script>().SetState(Card_State.inHand);
                 //StartCoroutine(MoveCardToHand(drawnCard));
-                handList.Add(gameObject);
-                deckList.Remove(gameObject);
+                handList.Add(drawnCard);
+                deckList.Remove(drawnCard);
                 drawCount++;
                 //UpdateDeckCount();
                 Debug.Log(drawnCard.name + " elde");
@@ -210,8 +214,8 @@ public class DeckManager_script : MonoBehaviour
             Debug.Log("PlayCard �a�r�ld�");
             Debug.Log("Kart mezar paneline ta��n�yor");
             handList.Remove(card);
-            card.transform.SetParent(gravePanel); // Kart� mezar paneline ta��
-            card.transform.localPosition = Vector3.zero; // Mezarl�kta konumunu s�f�rla
+            //card.transform.SetParent(gravePanel); // Kart� mezar paneline ta��
+            //card.transform.localPosition = Vector3.zero; // Mezarl�kta konumunu s�f�rla
             playedCards.Add(card);
             UpdatePlayedCards();
             Debug.Log(card.name + " mezarda");
