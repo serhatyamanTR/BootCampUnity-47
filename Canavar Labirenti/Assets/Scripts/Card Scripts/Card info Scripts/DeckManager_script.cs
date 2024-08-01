@@ -133,27 +133,45 @@ public class DeckManager_script : MonoBehaviour
         for (int i = 0; i < 5; i++)
             {
                 DrawCard();
+                Debug.Log("Deckmanagerdeki Draw içinden HandPanel = " + handPanel);
                 yield return new WaitForSeconds(0.1f); // Animasyon s�resi
             }
     }
 
     public void DrawCard()
     {
-        if (deckList.Count > 0 && handList.Count < 5)
-        {
-            GameObject drawnCard = GetUniqueCard();
-            if (drawnCard != null)
+        if (deckList.Count > 0)
             {
-
-                drawnCard.GetComponent<Card_State_script>().SetState(Card_State.inHand);
-                //StartCoroutine(MoveCardToHand(drawnCard));
-                handList.Add(drawnCard);
-                deckList.Remove(drawnCard);
-                drawCount++;
-                //UpdateDeckCount();
-                Debug.Log(drawnCard.name + " elde");
+                if (handList.Count < 5)
+                    {
+                        GameObject drawnCard = GetUniqueCard();
+                        if (drawnCard != null)
+                            {
+                            
+                                drawnCard.GetComponent<Card_State_script>().SetState(Card_State.inHand);
+                                //StartCoroutine(MoveCardToHand(drawnCard));
+                                handList.Add(drawnCard);
+                                deckList.Remove(drawnCard);
+                                drawCount++;
+                                //UpdateDeckCount();
+                                Debug.Log("Handlist = " + handList);
+                                Debug.Log("DeckList = " + deckList);
+                                Debug.Log(drawnCard.name + " elde");
+                            }
+                            else
+                                {
+                                    Debug.LogError("DrawCard null");
+                                }
+                    }
+                    else
+                        {
+                            Debug.LogError("handList 5i geçti");
+                        }
             }
-        }
+            else
+                {
+                    Debug.LogWarning("deckListte kart kalmadı");
+                }
     }
 
     GameObject GetUniqueCard()
@@ -168,6 +186,7 @@ public class DeckManager_script : MonoBehaviour
             if (!handList.Any(c => c.name == selectedCard.name)) // Elde yoksa
             {
                 //deckList.Remove(selectedCard); // Desteden ��kar
+                Debug.Log("Uniqe fonksiyonu ile Destelen ele seçilen kart = " + selectedCard.name );
                 return selectedCard;
             }
             else
@@ -205,7 +224,8 @@ public class DeckManager_script : MonoBehaviour
         }
     }
     */
-
+    
+    /*
     public void PlayCard(GameObject card)
     {
         if (handList.Contains(card) || card.transform.parent == inGamePanel)
@@ -230,6 +250,7 @@ public class DeckManager_script : MonoBehaviour
             Debug.Log("Kart el veya oynanabilir alanda de�il");
         }
     }
+    */
 /*
     public void SetCardsInteractable(bool interactable)
     {

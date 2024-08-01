@@ -5,18 +5,25 @@
 
     public class inGamePanelSlots_script : MonoBehaviour,IDropHandler
     {
+
         public void OnDrop(PointerEventData eventData)
         {
+            GameObject dropped  = eventData.pointerDrag;
+            Card_State_script card_State_Script = dropped.GetComponent<Card_State_script>();
             if (transform.childCount ==0)
                 {
-                    GameObject dropped  = eventData.pointerDrag;
-                    Card_State_script card_State_Script = dropped.GetComponent<Card_State_script>();
+                    
+
                     card_State_Script.parentAfterDrag = transform;
-                    dropped.GetComponent<Card_State_script>().SetState(Card_State.inGame);
+                    card_State_Script.SetState(Card_State.inGame);
+                    card_State_Script.SelectedinGamePanelSlot = gameObject.transform.GetSiblingIndex();
+                    card_State_Script.isSlotSelected = true;
                 }
                 else
                 {
                     Debug.Log("Slot Dolu");
+                    card_State_Script.isSlotSelected = false;
+
                 }
                     
         }

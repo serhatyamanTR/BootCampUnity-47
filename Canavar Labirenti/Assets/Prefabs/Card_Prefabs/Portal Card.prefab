@@ -249,7 +249,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 483.80005, y: -133.2}
-  m_SizeDelta: {x: 101, y: 194}
+  m_SizeDelta: {x: 81, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &224657680461342030
 CanvasRenderer:
@@ -302,6 +302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager_Script: {fileID: 0}
+  SelectedinGamePanelSlot: 0
+  isSlotSelected: 0
   cardSpellTag: 
   isCardPlayed: 0
   isCardActive: 0
