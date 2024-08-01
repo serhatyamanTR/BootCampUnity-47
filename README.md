@@ -209,4 +209,50 @@ Hedeflenen sprint puanı 80 dir ve 70 puanla tamamlanmıştır.
 - Sprint sonunda alınan puan 70'dir.
 - Ekip üyelerinin sarfetmesi gereken efor arttırılmalıdır.
   
+## SPRİNT 3
+ **Sprint Notları**:
+
+Detaylı incelemeler Product Backlog URL içerisinden incelenebilir. 
+
+**Sprint içinde tamamlanması planlanan puan**: 140 Puan
+
+**Puan tamamlama mantığı**: Bu sprintte arayüz uyarlanması, kart scriptlerinin bitirilmesi, Canavar AI tamamlanıp geliştirilmesi, sahne ayarlamaları ve obje yerleştirmeleri, ses efeketleri, ve haritaların tamamlanmasının yapılması hedeflenmiştir.
+Hedeflenen sprint puanı 140 dır ve  başarıyla tamamlanmıştır.
+
+**Daily Scrum**: Daily Scrum toplantıları hem Whatsapp üzerinden hem de Discord üzerinden devam etmiştir. 
+
+Örnek Toplantı Görüntüleri:
+
+<img width="1100" alt="3 sprintToplantı" src="https://github.com/user-attachments/assets/3aa750a9-c346-4c3a-b11f-33ec390330a2">
+
+<img width="488" alt="3 sprintToplantı2" src="https://github.com/user-attachments/assets/180c7e3b-b044-4a2a-8ed2-ece9ea52ce3c">
+
+
+ **Sprint board update**: Sprint board görüntüsü
+
+<img width="610" alt="3 sprintboard" src="https://github.com/user-attachments/assets/ea6293aa-aa4c-4e51-bb9b-cc25420be05b">
+
+
+
+ **Ürün Durumu**:  Ekran görüntüleri:
+![sprint3uzay](https://github.com/user-attachments/assets/d57a4bf9-33cb-47d6-9516-945365f6d4f5)
+
+![sprint3orman](https://github.com/user-attachments/assets/338b4eaf-a703-4920-86eb-dd4f8b3bad24)
+
+![sprint3cehennem](https://github.com/user-attachments/assets/027451e5-1cbe-450c-abbc-0fae7bd51032)
+
+![sprint3_2](https://github.com/user-attachments/assets/3b3ec71f-cce0-42e1-9a90-13d32812276b)
+
+
+**Sprint Review**: 
+Son sprintte ürün geliştirilip toparlanmıştır. Arayüz uyarlanması, kart scriptlerinin bitirilmesi, Canavar AI tamamlanıp geliştirilmesi, sahne ayarlamaları ve obje yerleştirmeleri, ses efeketleri ve haritalar tamamlanmıştır.
+
+**Sprint Retrospective:**
+Ekip zaman yönetimi konusunda zorlanmıştır. Ml-Agents uğraşları uzun sürmüştür. 
+
+
+**Gelecekte Yapılması Planlananlar:**
+
+- Bilgisayara karşı oynama özelliği
+- Multiplayer oyun seçeneği
 
