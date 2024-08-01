@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Card_Ballista_Special_Script : MonoBehaviour
 {
-    public Selection_Point_interact selection_Point_Interact;
+    public GameObject BallistaBaseObject;
+    private Transform BallistaBase;
+    public DeckManager_script deckManager_Script;
     public GameObject CardSpecialObject;
     // Start is called before the first frame update
     void Start()
     {
-        
+        deckManager_Script = GameObject.Find("DeckManagerPanel").GetComponent<DeckManager_script>();
+        BallistaBase.position = BallistaBaseObject.transform.position + Vector3.up;
     }
 
     // Update is called once per frame
@@ -23,12 +26,10 @@ public class Card_Ballista_Special_Script : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("0 butonuna basıldı");
-                    if (selection_Point_Interact.isObjectSelected)
-                        {
-                            //selection_Point_Interact.selectedObjectTransform.gameObject.SetActive(false);
-                            Instantiate(CardSpecialObject, selection_Point_Interact.selectedObjectTransform.position + Vector3.up, selection_Point_Interact.selectedObjectTransform.rotation );
-                            Debug.Log("oluşturma kodu çalıştı");
-                        }
+                    Instantiate(CardSpecialObject, BallistaBase);
+                    //Balista animasyon kodunu belki bootcamp sonrası buraya yazabilirim
+                    deckManager_Script.isTurnPlayer1=false;
+                    Debug.Log("balista oluşturma kodu çalıştı");
                 }
 
         }
