@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 149108791888399351}
   - component: {fileID: -2536763649440916128}
   m_Layer: 5
-  m_Name: Sightless Card
+  m_Name: Sightless Card_iptal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

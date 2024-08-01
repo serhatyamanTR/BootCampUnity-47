@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 829831391550210440}
   - component: {fileID: -291828239592743873}
   m_Layer: 5
-  m_Name: Agent Card
+  m_Name: Agent Card_iptal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

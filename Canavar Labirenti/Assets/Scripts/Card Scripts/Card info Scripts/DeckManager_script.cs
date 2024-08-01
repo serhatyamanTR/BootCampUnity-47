@@ -27,7 +27,8 @@ public class DeckManager_script : MonoBehaviour
 /*-------------------------------------------------------------------------*/
 
     public bool isTurnPlayer1;
-
+    public bool isTurnPlayer2;
+    public bool isMoveAnimCompleted =true;
     public TextMeshProUGUI deckCountText; // Deste say�s�n� g�steren text
     public TextMeshProUGUI playedCardsText; // Oynanan kartlar� g�steren text
     public GameObject cardBackPrefab; // Kart arka y�z� prefab�
@@ -46,7 +47,7 @@ public class DeckManager_script : MonoBehaviour
                 return;
             }
         InitializeDeck();
-        DealStartingHand();
+        //DealStartingHand();
        //UpdateDeckCount();
     }
     void Update()
@@ -86,32 +87,35 @@ public class DeckManager_script : MonoBehaviour
 
     GameObject GetRandomCardPrefab()
     {
-        Debug.Log("Random kart seçiliyor");
+        //Debug.Log("Random kart seçiliyor");
         int randomIndex = Random.Range(0, 100);
         if (randomIndex < 5)
         {
             // %5 ihtimalle "EN EN EN Nadir" kartlar (0-1)
-            return cardPrefabs[Random.Range(0, 2)];
+            return cardPrefabs[0];
         }
         else if (randomIndex < 15)
         {
             // %10 ihtimalle "En Nadir" kartlar (2-3)
-            return cardPrefabs[Random.Range(2, 4)];
+            return cardPrefabs[1];
         }
         else if (randomIndex < 35)
         {
             // %20 ihtimalle "Ender" kartlar (4-11)
-            return cardPrefabs[Random.Range(4, 12)];
+
+            return cardPrefabs[Random.Range(1,8)];
         }
         else if (randomIndex < 65)
         {
             // %30 ihtimalle "Ortalama" kartlar (12-18)
-            return cardPrefabs[Random.Range(12, 19)];
+
+            return cardPrefabs[Random.Range(8,12)];
         }
         else
         {
             // %40 ihtimalle "Normal" kartlar (19-29)
-            return cardPrefabs[Random.Range(19, cardPrefabs.Count)];
+
+            return cardPrefabs[Random.Range(12, cardPrefabs.Count)];
         }
     }
 
@@ -122,14 +126,17 @@ public class DeckManager_script : MonoBehaviour
 
     void DealHandReload()
         {
+            //Debug.Log("Reload çalıştı");
             if (isTurnPlayer1 && handList.Count == 0)
                 {
-                    DealCardsCoroutine();
+                    Debug.Log("el boş ve sıra bizde reload görevini yaptı");
+                    StartCoroutine(DealCardsCoroutine());
                 }    
         }
 
     IEnumerator DealCardsCoroutine()
     {
+        Debug.Log("DealCardCorutine çalıştı");
         for (int i = 0; i < 5; i++)
             {
                 DrawCard();
@@ -154,8 +161,8 @@ public class DeckManager_script : MonoBehaviour
                                 deckList.Remove(drawnCard);
                                 drawCount++;
                                 //UpdateDeckCount();
-                                Debug.Log("Handlist = " + handList);
-                                Debug.Log("DeckList = " + deckList);
+                                //Debug.Log("Handlist = " + handList);
+                                //Debug.Log("DeckList = " + deckList);
                                 Debug.Log(drawnCard.name + " elde");
                             }
                             else

@@ -53,9 +53,10 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
     //public GameObject CardPrefab; //kartın kendi prefabi
     public GameObject infoPanel; //kartın info panel prefabi
     public MonoScript CardSpecialScript; //kartın özel efektini içeren script
-    public float cardsAnimationSpeed;
+    public float cardsAnimationSpeed=3f;
     public float inCardPointerTimer = 2f;
     private float inCardPointerTimeRemain;
+    
 
     void Awake()
         {
@@ -152,12 +153,27 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                             }
                             else
                                 {
-                                    Debug.Log(gameObject.name + " 0 veya birden fazla info paneli var");
+                                    Debug.LogError(gameObject.name + " 0 veya birden fazla info paneli var");
                                     infoPanel = null;
                                 }
-                        if (gameObject != null)
-                            {
-                                StartCoroutine(MoveCardToPanel(gameObject, deckPanel));
+                        if (gameObject != null )
+                            {    
+                                if (
+                                        gameObject.transform.parent == handPanel
+                                        ||
+                                        gameObject.transform.parent == inGamePanel
+                                        ||
+                                        gameObject.transform.parent == gravePanel
+
+                                   )
+                                    {
+                                        StartCoroutine(MoveCardToPanel(gameObject, deckPanel));
+                                    }
+                                    else
+                                    {
+                                        gameObject.transform.SetParent(deckPanel);
+                                        gameObject.transform.SetAsFirstSibling();  
+                                    }
 
                             }
                         gameObject.transform.localPosition = Vector3.zero;
@@ -175,10 +191,10 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                         isCardinHand    =   true;
                         //handList.Add(gameObject);
                         //gameObject.transform.SetParent(handPanel);  
-                        Debug.Log("inhand deki HandPanel = " + handPanel);
+                        //Debug.Log("inhand deki HandPanel = " + handPanel);
                         if (handPanel != null)
                         {
-                            Debug.Log("handpanel çalşıyor");
+                            //Debug.Log("handpanel çalşıyor");
                         }
                         else
                             {
@@ -257,6 +273,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
             card.transform.SetParent(hedefPanel);
             card.transform.SetAsFirstSibling();
             card.transform.localPosition = Vector3.zero;
+            deckManager_Script.isMoveAnimCompleted= true;
         }
 
 
@@ -294,43 +311,52 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
         {
             Debug.Log("Tıklanan Kart = " + gameObject.name);
             infoPanel.SetActive(false);
+            
 
             if ( isCardinHand && eventData.button == PointerEventData.InputButton.Right)
                 {
-                    Debug.Log("karta SAĞ tıklandı = " + gameObject.name);
-                    SetState(Card_State.inGame);
-
-                    for (int i = 0; i< inGamePanel.childCount;i++)
+                    if(deckManager_Script.isMoveAnimCompleted)
                         {
-                            if (inGamePanel.GetChild(i).childCount == 0)
+                            deckManager_Script.isMoveAnimCompleted = false;
+                            Debug.Log("karta SAĞ tıklandı = " + gameObject.name);
+                            SetState(Card_State.inGame);
+
+                            for (int i = 0; i< inGamePanel.childCount;i++)
                                 {
-                                    StartCoroutine(MoveCardToPanel(gameObject, inGamePanel.GetChild(i)));
-                                    break;
+                                    if (inGamePanel.GetChild(i).childCount == 0)
+                                        {
+                                            StartCoroutine(MoveCardToPanel(gameObject, inGamePanel.GetChild(i)));
+                                            break;
+                                        }
+                                }
+
+
+                            if (isCardActive &&!isCardPlayed)
+                                {
+                                    Debug.Log("Kart Oynandı = " + gameObject.name);
+                                    if (CardSpecialScript != null)
+                                        {
+                                            var CardSpecialEffect = CardSpecialScript.GetType().GetMethod("CardSpecialEffect");
+
+                                            if (CardSpecialEffect != null)
+                                                    {
+                                                        CardSpecialEffect.Invoke(CardSpecialScript, null);
+                                                    }
+                                                else
+                                                    {
+                                                        Debug.LogWarning("Katın özel efekti yok");
+                                                    }
+                                        }
+                                    else
+                                        {
+                                            Debug.LogWarning("Katın özel scripti yok");
+                                        }
                                 }
                         }
-                    
-
-                    if (isCardActive &&!isCardPlayed)
-                        {
-                            Debug.Log("Kart Oynandı = " + gameObject.name);
-                            if (CardSpecialScript != null)
-                                {
-                                    var CardSpecialEffect = CardSpecialScript.GetType().GetMethod("CardSpecialEffect");
-
-                                    if (CardSpecialEffect != null)
-                                            {
-                                                CardSpecialEffect.Invoke(CardSpecialScript, null);
-                                            }
-                                        else
-                                            {
-                                                Debug.LogWarning("Katın özel efekti yok");
-                                            }
-                                }
-                            else
-                                {
-                                    Debug.LogWarning("Katın özel scripti yok");
-                                }
-                        }
+                        else
+                            {
+                                Debug.LogWarning("Moveanimation bitmeden sağ tıklandı");
+                            }
                 }
         }
     public void OnBeginDrag(PointerEventData eventData)
@@ -365,11 +391,11 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                 );
             transform.localPosition = localPointerPosition;
             
-            Debug.Log("Anlık mouse input lokasyonu = " + Input.mousePosition);
-            Debug.Log("Anlık mouse eventdataposition lokasyonu = " + eventData.position);
-            Debug.Log("Anlık localposition lokasyonu = " + transform.localPosition);
-            Debug.Log(gameObject.name + " kartının anlık lokasyonu = " + transform.position);
-            Debug.Log("Card Anlık Parenti = " + transform.parent.gameObject.name);
+            //Debug.Log("Anlık mouse input lokasyonu = " + Input.mousePosition);
+            //Debug.Log("Anlık mouse eventdataposition lokasyonu = " + eventData.position);
+            //Debug.Log("Anlık localposition lokasyonu = " + transform.localPosition);
+            //Debug.Log(gameObject.name + " kartının anlık lokasyonu = " + transform.position);
+            //Debug.Log("Card Anlık Parenti = " + transform.parent.gameObject.name);
         }
     }
 
@@ -377,7 +403,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
     {
         if (isDragging)
         {
-            Debug.Log("Sürükleme Bitti = " + gameObject.name);
+            //Debug.Log("Sürükleme Bitti = " + gameObject.name);
             isDragging = false;
             transform.SetParent(parentAfterDrag);
             tempImage = GetComponent<Image>();
