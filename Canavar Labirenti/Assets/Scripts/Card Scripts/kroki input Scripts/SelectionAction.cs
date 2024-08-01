@@ -29,7 +29,7 @@ public class SelectionAction : MonoBehaviour
                         {
                             Debug.Log("obje selected  ve 1 butonuna basıldı");
                             //selection_Point_Interact.selectedObjectTransform.gameObject.SetActive(false);
-                            Instantiate(PrefabToInstantiate, selection_Point_Interact.selectedObjectTransform);
+                            Instantiate(PrefabToInstantiate, selection_Point_Interact.selectedObjectTransform.position,selection_Point_Interact.selectedObjectTransform.rotation);
                             Debug.Log("oluşturma kodu çalıştı");
 
                         }

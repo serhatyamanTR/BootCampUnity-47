@@ -13,7 +13,7 @@ public class ui_timer_script : MonoBehaviour
     
 
     public float turnTimer = 30f;
-    private float turnTimerRemain;
+    public float turnTimerRemain;
 
     // Start is called before the first frame update
         void Start()
@@ -30,21 +30,34 @@ public class ui_timer_script : MonoBehaviour
         {
             if (deckManager_Script.isTurnPlayer1)
                 {
-                    if ( turnTimerRemain < turnTimer)
-                    {
-                        turnTimerRemain += Time.deltaTime;
-                        timerCoverImage.fillAmount = turnTimerRemain / turnTimer;
-                        timerBaseImage.transform.localScale = Vector3.one*(turnTimerRemain/turnTimer);
-                        var tempcolor =timerBaseImage.color;
-                        tempcolor.a = turnTimerRemain / turnTimer;
-                        timerBaseImage.color = tempcolor;
-                    }
-                else
-                    { 
-                        
-                        deckManager_Script.isTurnPlayer1 = false;
-                    }
-                
+                    turnTimerRemain += Time.deltaTime;
+                    if ( turnTimerRemain <= turnTimer)
+                        {
+                            timerCoverImage.fillAmount = turnTimerRemain / turnTimer;
+                            timerBaseImage.transform.localScale = Vector3.one*(turnTimerRemain/turnTimer);
+                            var tempcolor =timerBaseImage.color;
+                            tempcolor.a = turnTimerRemain / turnTimer;
+                            timerBaseImage.color = tempcolor;
+                        }
+                        else
+                            {
+                                if(turnTimerRemain >= turnTimer && turnTimerRemain <= turnTimer+0.5f )
+                                    { 
+                                        gameObject.transform.localScale = Vector3.one*(turnTimerRemain-29); /* ax+b = scale,     x=30 = turntimer için 30a+b=1, 31a+b=1.3, a=3/10 b=-8 */
+                                    }
+                                    else    
+                                        {
+                                            if(turnTimerRemain>= turnTimer+0.5f && turnTimerRemain < turnTimer+1)
+                                                {
+                                                    gameObject.transform.localScale = Vector3.one*((-turnTimerRemain)+32); /* ax+b = scale,     x=30,5 = turntimer için 30,5a+b=1,3, 31a+b=1, a=-3/5, b=+196/10 */
+                                                }
+                                                else
+                                                    {
+                                                        gameObject.transform.localScale = Vector3.one;
+                                                        deckManager_Script.isTurnPlayer1 = false;
+                                                    }
+                                        }
+                        }
                 }
         }
 }
