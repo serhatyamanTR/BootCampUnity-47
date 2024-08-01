@@ -58,7 +58,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
     public int cardActiveRoundRemain;
     //public GameObject CardPrefab; //kartın kendi prefabi
     public MonoBehaviour CardSpecialScript; //kartın özel efektini içeren script
-    public float cardsAnimationSpeed=3f;
+    public float cardsAnimationSpeed=4f;
     public float inCardPointerTimer = 2f;
     private float inCardPointerTimeRemain;
 
@@ -284,14 +284,9 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
 
                         StartCoroutine(MoveCardToPanel(gameObject, gravePanel));
                         gameObject.transform.localPosition = Vector3.zero;
-                        if (CardSpecialScript != null)
-                            {
-                                var CardOutEffect = CardSpecialScript.GetType().GetMethod("CardOutEffect()");
-                                if (CardOutEffect != null)
-                                    {
-                                        CardOutEffect.Invoke(CardSpecialScript, null);
-                                    }
-                            }
+
+                        InvokeMethodIfExists(CardSpecialScript, "CardOutEffect");
+                        
                     }
                     break;
                 }            
