@@ -10337,6 +10337,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1728274276078085903, guid: eb6b5fd52b915084490c46b8530258b7, type: 3}
+      propertyPath: turnTimerRemain
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5488315873052745860, guid: eb6b5fd52b915084490c46b8530258b7, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
