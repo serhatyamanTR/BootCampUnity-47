@@ -25,7 +25,8 @@ public class gate_object_script : MonoBehaviour
                 if(other.CompareTag("wall"))
                     {
                         Debug.Log("obje kapandı = "+ other.gameObject.name);
-                        other.gameObject.SetActive(false);
+                        other.gameObject.GetComponent<MeshRenderer>().enabled=false;
+                        other.gameObject.GetComponent<Collider>().enabled=false;
                         disabledWall = other.gameObject;
                         gameObject.GetComponent<Rigidbody>().detectCollisions = false; //sadece bir kereliğinne duvarları yokediyor.
                     }
@@ -35,8 +36,9 @@ public class gate_object_script : MonoBehaviour
                 Debug.Log("triggerdan çıktı = "+ other.gameObject.name);
                 if(other.CompareTag("wall"))
                     {
+                        other.gameObject.GetComponent<MeshRenderer>().enabled=true;
+                        other.gameObject.GetComponent<Collider>().enabled=true;
                         Debug.Log("obje açıldı = "+ other.gameObject.name);
-                        other.gameObject.SetActive(true);
                     }
             }        
     }
