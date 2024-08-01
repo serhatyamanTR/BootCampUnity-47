@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5460850616440992519}
   - component: {fileID: 1948392976580413048}
   - component: {fileID: -4161205492430033984}
+  - component: {fileID: 8979456613298565466}
   m_Layer: 5
   m_Name: Dash Card
   m_TagString: Untagged
@@ -90,9 +91,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager_Script: {fileID: 0}
+  selection_Point_Interact: {fileID: 0}
   SelectedinGamePanelSlot: 0
   isSlotSelected: 0
-  cardSpellTag: 
+  infoPanel: {fileID: 7558651563841437116}
+  cardStateSpellTag: 
   isCardPlayed: 0
   isCardActive: 0
   isCardinHand: 0
@@ -101,10 +104,21 @@ MonoBehaviour:
   tempImage: {fileID: 0}
   cardActiveRoundCount: 0
   cardActiveRoundRemain: 0
-  infoPanel: {fileID: 7558651563841437116}
   CardSpecialScript: {fileID: 0}
   cardsAnimationSpeed: 1
   inCardPointerTimer: 2
+--- !u!114 &8979456613298565466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682320339981697854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea8fb0c34240c548966d6ea17f24304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7558651563841437116
 GameObject:
   m_ObjectHideFlags: 0

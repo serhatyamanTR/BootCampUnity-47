@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 5867353881134552342}
   - component: {fileID: 8970880070657491461}
   - component: {fileID: 139772740747832435}
+  - component: {fileID: 3897668029269018398}
   m_Layer: 5
   m_Name: Kill Card
   m_TagString: Untagged
@@ -226,9 +227,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager_Script: {fileID: 0}
+  selection_Point_Interact: {fileID: 0}
   SelectedinGamePanelSlot: 0
   isSlotSelected: 0
-  cardSpellTag: 
+  infoPanel: {fileID: 4438461529453352428}
+  cardStateSpellTag: 
   isCardPlayed: 0
   isCardActive: 0
   isCardinHand: 0
@@ -237,10 +240,23 @@ MonoBehaviour:
   tempImage: {fileID: 0}
   cardActiveRoundCount: 0
   cardActiveRoundRemain: 0
-  infoPanel: {fileID: 4438461529453352428}
   CardSpecialScript: {fileID: 0}
   cardsAnimationSpeed: 1
   inCardPointerTimer: 2
+--- !u!114 &3897668029269018398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3486801767988053155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a6bf77ba2992a4c88f952de2106d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selection_Point_Interact: {fileID: 0}
+  CardSpecialObject: {fileID: 0}
 --- !u!1 &4438461529453352428
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Image = UnityEngine.UI.Image;
 using System.Security.Cryptography;
+using System.Net.WebSockets;
+using System.Reflection;
 
 public  enum Card_State
     {
@@ -19,6 +21,8 @@ public  enum Card_State
 public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDragHandler , IDragHandler,IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public DeckManager_script deckManager_Script;
+
+    public Selection_Point_interact selection_Point_Interact;
 
 
 /*  ------------------    Paneller ve Listeleri ----------------------*/
@@ -34,9 +38,11 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
     private Transform gravePanel; // Mezar paneli
     private List<GameObject> graveList;
 
+    public GameObject infoPanel; //kartın info panel prefabi
+
 /*-------------------------------------------------------------------------*/
 
-    public String cardSpellTag;
+    public String cardStateSpellTag;
     public bool isCardPlayed    =   false;
     public bool isCardActive    =   false;
     public bool isCardinHand = false;
@@ -51,24 +57,39 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
     public  int cardActiveRoundCount;
     public int cardActiveRoundRemain;
     //public GameObject CardPrefab; //kartın kendi prefabi
-    public GameObject infoPanel; //kartın info panel prefabi
-    public MonoScript CardSpecialScript; //kartın özel efektini içeren script
-    public float cardsAnimationSpeed=3f;
+    public MonoBehaviour CardSpecialScript; //kartın özel efektini içeren script
+    public float cardsAnimationSpeed=4f;
     public float inCardPointerTimer = 2f;
     private float inCardPointerTimeRemain;
+
+    private Component[] components;
     
 
     void Awake()
         {
+            
+            
             deckManager_Script = GameObject.Find("DeckManagerPanel").GetComponent<DeckManager_script>();
             deckPanel   = GameObject.Find("DeckPanel").transform;
             handPanel   = GameObject.Find("HandPanel").transform;
             inGamePanel = GameObject.Find("inGamePanel").transform;
             gravePanel  = GameObject.Find("GravePanel").transform;
+            selection_Point_Interact = GameObject.Find("Selection_Point").GetComponent<Selection_Point_interact>();
         }
     // Start is called before the first frame update
     void Start()
         {
+
+             components = GetComponents<Component>();
+                Debug.Log("CardState Start için  ismi = "+gameObject.name );
+                if((MonoBehaviour)components[4] !=null)
+                {
+                    CardSpecialScript = (MonoBehaviour)components[4];
+                }
+                else
+                    {
+                        Debug.LogWarning("CardSpecialScript 4. component değil veya eklenmemiş");
+                    }
 
             //CardPrefab = transform.gameObject;
             originalScale = transform.localScale;
@@ -124,6 +145,28 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
     void Update()
         {
 
+        }
+    private void InvokeMethodIfExists(MonoBehaviour component, string methodName)
+        {
+            if (component != null)
+                {
+                    // Metod bilgilerini al
+                    MethodInfo method = component.GetType().GetMethod(methodName);
+
+                    if (method != null)
+                        {
+                            // Metodu çalıştır
+                            method.Invoke(component, null);
+                        }
+                    else
+                        {
+                            Debug.LogWarning($"Method {methodName} not found in {component.GetType().Name}");
+                        }
+                }
+            else
+                {
+                    Debug.LogWarning("Component is null");
+                }
         }
 
     public void SetState(Card_State state)
@@ -219,13 +262,17 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
 
                 case Card_State.inGame:
                     {
-                        
+                        selection_Point_Interact.cardSpellTag = cardStateSpellTag;
                         gameObject.transform.localPosition = Vector3.zero;
                         deckManager_Script.handList.Remove(gameObject);
                         isCardinHand    =   false;
                         isCardActive    =   true;
                         isCardPlayed    =   false;
-                        
+                        if (isCardActive &&!isCardPlayed)
+                                {
+                                    Debug.Log("Kart Oynandı = " + gameObject.name);
+                                    InvokeMethodIfExists(CardSpecialScript, "CardSpecialEffect");
+                                }
                        
 
 
@@ -237,14 +284,9 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
 
                         StartCoroutine(MoveCardToPanel(gameObject, gravePanel));
                         gameObject.transform.localPosition = Vector3.zero;
-                        if (CardSpecialScript != null)
-                            {
-                                var CardOutEffect = CardSpecialScript.GetType().GetMethod("CardOutEffect");
-                                if (CardOutEffect != null)
-                                    {
-                                        CardOutEffect.Invoke(CardSpecialScript, null);
-                                    }
-                            }
+
+                        InvokeMethodIfExists(CardSpecialScript, "CardOutEffect");
+                        
                     }
                     break;
                 }            
@@ -331,27 +373,7 @@ public class Card_State_script : MonoBehaviour, IPointerClickHandler, IBeginDrag
                                 }
 
 
-                            if (isCardActive &&!isCardPlayed)
-                                {
-                                    Debug.Log("Kart Oynandı = " + gameObject.name);
-                                    if (CardSpecialScript != null)
-                                        {
-                                            var CardSpecialEffect = CardSpecialScript.GetType().GetMethod("CardSpecialEffect");
-
-                                            if (CardSpecialEffect != null)
-                                                    {
-                                                        CardSpecialEffect.Invoke(CardSpecialScript, null);
-                                                    }
-                                                else
-                                                    {
-                                                        Debug.LogWarning("Katın özel efekti yok");
-                                                    }
-                                        }
-                                    else
-                                        {
-                                            Debug.LogWarning("Katın özel scripti yok");
-                                        }
-                                }
+                            
                         }
                         else
                             {

@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 5983115238086122576}
   - component: {fileID: 6489358695857085766}
   - component: {fileID: 371040184393857413}
+  - component: {fileID: 537720423541537253}
   m_Layer: 5
   m_Name: Locksmith Card
   m_TagString: Untagged
@@ -226,9 +227,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager_Script: {fileID: 0}
+  selection_Point_Interact: {fileID: 0}
   SelectedinGamePanelSlot: 0
   isSlotSelected: 0
-  cardSpellTag: 
+  infoPanel: {fileID: 6796952589977814860}
+  cardStateSpellTag: 
   isCardPlayed: 0
   isCardActive: 0
   isCardinHand: 0
@@ -237,10 +240,23 @@ MonoBehaviour:
   tempImage: {fileID: 0}
   cardActiveRoundCount: 0
   cardActiveRoundRemain: 0
-  infoPanel: {fileID: 6796952589977814860}
   CardSpecialScript: {fileID: 0}
   cardsAnimationSpeed: 1
   inCardPointerTimer: 2
+--- !u!114 &537720423541537253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3961579197554104085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44709a126457b2d4dbf81fb9ecc60196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selection_Point_Interact: {fileID: 0}
+  CardSpecialObject: {fileID: 0}
 --- !u!1 &6796952589977814860
 GameObject:
   m_ObjectHideFlags: 0
