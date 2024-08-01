@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 3082805703633637025}
   - component: {fileID: 5671378192468348361}
   - component: {fileID: 7612690834659837137}
+  - component: {fileID: 4663454142937336904}
   m_Layer: 5
   m_Name: Door Card
   m_TagString: Untagged
@@ -226,9 +227,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager_Script: {fileID: 0}
+  selection_Point_Interact: {fileID: 0}
   SelectedinGamePanelSlot: 0
   isSlotSelected: 0
-  cardSpellTag: 
+  infoPanel: {fileID: 7754990302738300786}
+  cardStateSpellTag: 
   isCardPlayed: 0
   isCardActive: 0
   isCardinHand: 0
@@ -237,10 +240,24 @@ MonoBehaviour:
   tempImage: {fileID: 0}
   cardActiveRoundCount: 0
   cardActiveRoundRemain: 0
-  infoPanel: {fileID: 7754990302738300786}
   CardSpecialScript: {fileID: 0}
   cardsAnimationSpeed: 1
   inCardPointerTimer: 2
+--- !u!114 &4663454142937336904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706236971102175019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff7fb2a41b5f5c4a8f8034013dcc21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selection_Point_Interact: {fileID: 0}
+  card_State_script: {fileID: 0}
+  CardSpecialObject: {fileID: 0}
 --- !u!1 &7754990302738300786
 GameObject:
   m_ObjectHideFlags: 0

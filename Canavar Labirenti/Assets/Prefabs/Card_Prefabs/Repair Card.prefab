@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 7648927932089099280}
   - component: {fileID: 8736152991160705344}
   - component: {fileID: 5515400362623030086}
+  - component: {fileID: -6657828370240754587}
   m_Layer: 5
   m_Name: Repair Card
   m_TagString: Untagged
@@ -166,9 +167,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager_Script: {fileID: 0}
+  selection_Point_Interact: {fileID: 0}
   SelectedinGamePanelSlot: 0
   isSlotSelected: 0
-  cardSpellTag: 
+  infoPanel: {fileID: 1455462361655960384}
+  cardStateSpellTag: 
   isCardPlayed: 0
   isCardActive: 0
   isCardinHand: 0
@@ -177,10 +180,23 @@ MonoBehaviour:
   tempImage: {fileID: 0}
   cardActiveRoundCount: 0
   cardActiveRoundRemain: 0
-  infoPanel: {fileID: 1455462361655960384}
   CardSpecialScript: {fileID: 0}
   cardsAnimationSpeed: 1
   inCardPointerTimer: 2
+--- !u!114 &-6657828370240754587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4838214925504277876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9683a542b0f5b64d9b350ac27da4f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selection_Point_Interact: {fileID: 0}
+  CardSpecialObject: {fileID: 0}
 --- !u!1 &9191800358268735846
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class DeckManager_script : MonoBehaviour
     public TextMeshProUGUI playedCardsText; // Oynanan kartlar� g�steren text
     public GameObject cardBackPrefab; // Kart arka y�z� prefab�
 
+
     
     
     private List<GameObject> playedCards = new List<GameObject>(); // Oynanan kartlar
@@ -41,6 +42,8 @@ public class DeckManager_script : MonoBehaviour
     void Start()
     {
         isTurnPlayer1 = true;
+        isTurnPlayer2 = false;
+
         if (deckPanel == null || handPanel == null || inGamePanel == null || gravePanel == null)
             {
                 Debug.LogError("Panel referanslarından biri veya birkaçı atanmadı!");
@@ -60,7 +63,7 @@ public class DeckManager_script : MonoBehaviour
         
 
 
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < cardPrefabs.Count; i++)
         {
             GameObject randomCardPrefab = GetRandomCardPrefab();
             

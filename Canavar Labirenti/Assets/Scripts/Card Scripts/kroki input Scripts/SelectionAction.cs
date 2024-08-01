@@ -22,15 +22,19 @@ public class SelectionAction : MonoBehaviour
     void OnMouseDown()
         {
             Debug.Log("OnmouseDown çalıştı");
-            if (Input.GetMouseButtonDown(0))
+
+            if (selection_Point_Interact.isObjectSelected)
                 {
-                    Debug.Log("1 butonuna basıldı");
-                    if (selection_Point_Interact.isObjectSelected)
+                    if (Input.GetMouseButtonDown(0))
                         {
+                            Debug.Log("obje selected  ve 1 butonuna basıldı");
                             //selection_Point_Interact.selectedObjectTransform.gameObject.SetActive(false);
                             Instantiate(PrefabToInstantiate, selection_Point_Interact.selectedObjectTransform);
                             Debug.Log("oluşturma kodu çalıştı");
+
                         }
                 }
+            
+            
         }
 }

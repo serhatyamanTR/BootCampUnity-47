@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7618549216201437926}
   - component: {fileID: 3556564436619124286}
   - component: {fileID: 5083266550233351274}
+  - component: {fileID: 1584095705866695539}
   m_Layer: 5
   m_Name: Shuffle Card
   m_TagString: Untagged
@@ -90,9 +91,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager_Script: {fileID: 0}
+  selection_Point_Interact: {fileID: 0}
   SelectedinGamePanelSlot: 0
   isSlotSelected: 0
-  cardSpellTag: 
+  infoPanel: {fileID: 8353830816037687374}
+  cardStateSpellTag: 
   isCardPlayed: 0
   isCardActive: 0
   isCardinHand: 0
@@ -101,10 +104,23 @@ MonoBehaviour:
   tempImage: {fileID: 0}
   cardActiveRoundCount: 0
   cardActiveRoundRemain: 0
-  infoPanel: {fileID: 8353830816037687374}
   CardSpecialScript: {fileID: 0}
   cardsAnimationSpeed: 1
   inCardPointerTimer: 2
+--- !u!114 &1584095705866695539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083923679762412013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf62cb8ffa2bd5945b269b37d03e9f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selection_Point_Interact: {fileID: 0}
+  CardSpecialObject: {fileID: 0}
 --- !u!1 &7133401127243137345
 GameObject:
   m_ObjectHideFlags: 0

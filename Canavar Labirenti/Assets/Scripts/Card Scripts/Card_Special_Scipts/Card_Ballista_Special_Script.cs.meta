@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 69cedeaa0a7244c45ac3c151b60e80c5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BallistaBaseObject: {instanceID: 0}
+  - deckManager_Script: {instanceID: 0}
+  - CardSpecialObject: {fileID: 8630260744561441400, guid: 0a2f06e5d65a9bb42abc8d6bc9b4082a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,6 +8,7 @@ TagManager:
   - zemin
   - wall
   - monster
+  - spell
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7181367125066697234}
   - component: {fileID: 549373607898978651}
   - component: {fileID: -1119432234729303397}
+  - component: {fileID: -3062173178608969614}
   m_Layer: 5
   m_Name: Sabotage Card
   m_TagString: Untagged
@@ -90,9 +91,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager_Script: {fileID: 0}
+  selection_Point_Interact: {fileID: 0}
   SelectedinGamePanelSlot: 0
   isSlotSelected: 0
-  cardSpellTag: 
+  infoPanel: {fileID: 7911808309468611420}
+  cardStateSpellTag: 
   isCardPlayed: 0
   isCardActive: 0
   isCardinHand: 0
@@ -101,10 +104,23 @@ MonoBehaviour:
   tempImage: {fileID: 0}
   cardActiveRoundCount: 0
   cardActiveRoundRemain: 0
-  infoPanel: {fileID: 7911808309468611420}
   CardSpecialScript: {fileID: 0}
   cardsAnimationSpeed: 1
   inCardPointerTimer: 2
+--- !u!114 &-3062173178608969614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540182138478677177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64e34a78696af243b4bb7fc0d05b3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selection_Point_Interact: {fileID: 0}
+  CardSpecialObject: {fileID: 0}
 --- !u!1 &7911808309468611420
 GameObject:
   m_ObjectHideFlags: 0
