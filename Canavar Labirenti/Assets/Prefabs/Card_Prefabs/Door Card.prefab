@@ -231,14 +231,14 @@ MonoBehaviour:
   SelectedinGamePanelSlot: 0
   isSlotSelected: 0
   infoPanel: {fileID: 7754990302738300786}
-  cardStateSpellTag: 
+  cardStateSpellTag: wall
   isCardPlayed: 0
   isCardActive: 0
   isCardinHand: 0
   isCardinGrave: 0
   parentAfterDrag: {fileID: 0}
   tempImage: {fileID: 0}
-  cardActiveRoundCount: 0
+  cardActiveRoundCount: 1
   cardActiveRoundRemain: 0
   CardSpecialScript: {fileID: 0}
   cardsAnimationSpeed: 1
