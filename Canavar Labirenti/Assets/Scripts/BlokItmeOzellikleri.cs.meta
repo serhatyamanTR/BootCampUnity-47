@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 925c6055639d5284398fc10b191a30f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dogruMateryal: {fileID: 2100000, guid: 6fcb1476b791901458780221bc8300c9, type: 2}
+  - yanlisMateryal: {fileID: 2100000, guid: c1bb4d98c57f34c4fb3ccb3aa5e7835e, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

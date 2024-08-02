@@ -8,6 +8,10 @@ TagManager:
   - wall
   - target
   - zemin
+  - exit
+  - duvar
+  - gate
+  - monster
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Monster
   - 
   - 
   - 
