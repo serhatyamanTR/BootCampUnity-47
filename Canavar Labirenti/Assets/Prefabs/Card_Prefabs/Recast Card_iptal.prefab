@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 4979063215973686561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 40, y: 70, z: 40}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3693714774938811603}
@@ -90,9 +90,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager_Script: {fileID: 0}
+  selection_Point_Interact: {fileID: 0}
   SelectedinGamePanelSlot: 0
   isSlotSelected: 0
-  cardSpellTag: 
+  infoPanel: {fileID: 7839178935549818008}
+  cardStateSpellTag: 
   isCardPlayed: 0
   isCardActive: 0
   isCardinHand: 0
@@ -101,7 +103,6 @@ MonoBehaviour:
   tempImage: {fileID: 0}
   cardActiveRoundCount: 0
   cardActiveRoundRemain: 0
-  infoPanel: {fileID: 7839178935549818008}
   CardSpecialScript: {fileID: 0}
   cardsAnimationSpeed: 1
   inCardPointerTimer: 2
