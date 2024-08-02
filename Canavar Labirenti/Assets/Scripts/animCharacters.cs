@@ -8,13 +8,12 @@ public class animCharacters : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Animator animator;
-    private bool hasAttackedThisTurn = false;
+    public bool hasAttackedThisTurn = false;
 
-    public bool isTurnPlayer1;
-    public bool isTurnPlayer2;
 
     void Start()
     {
+
         agent = gameObject.GetComponentInParent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
@@ -25,24 +24,34 @@ public class animCharacters : MonoBehaviour
 
     void Update()
     {
-        if (agent.speed > 0.90f)
-        {
-            animator.SetFloat("speed", agent.speed);
-        }
-        else if (agent.speed < 0.90f)
-        {
-            animator.SetFloat("speed", agent.speed);
-        }
+        animator.SetFloat("speed", agent.speed);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("gate") && !(isTurnPlayer1||isTurnPlayer2))
-        {
-            HandleAttack(other);
-
-        }
+        if (!(  GetComponentInParent<MonsterAgent> ().isTurnPlayer1
+                ||
+                GetComponentInParent<MonsterAgent> ().isTurnPlayer2) && other.gameObject.CompareTag("gate")
+            )
+            {
+                
+                HandleAttack(other);
+                
+            }
+            else
+                {
+                    StartCoroutine(ResetAttack());
+                }
     }
+    private void OnTriggerExit (Collider other)
+        {
+            if (other.gameObject.CompareTag("gate"))
+                {
+                    
+                    StartCoroutine(ResetAttack());
+                    agent.speed = 1;
+                }
+        }
 
     public void HandleAttack(Collider exit)
     {
@@ -67,25 +76,25 @@ public class animCharacters : MonoBehaviour
             }
 
             hasAttackedThisTurn = true;
-            StartCoroutine(ResetAttack());
+//            StartCoroutine(ResetAttack());
         }
+        GetComponentInParent<MonsterAgent> ().isTurnPlayer1=true;
     }
 
     private IEnumerator ResetAttack()
     {
         yield return new WaitForSeconds(1); // Bir sonraki turu bekle
-        isTurnPlayer1=true;
         hasAttackedThisTurn = false;
         animator.SetBool("isAttack", false);
         animator.SetFloat("speed", 0); // idle animasyonuna geçiş için hız değerini sıfırla
-        agent.speed = 1;
     }
 
-    public void ResetAttackStatus()
+   /* public void ResetAttackStatus()
     {
         hasAttackedThisTurn = false;
         animator.SetBool("isAttack", false);
         animator.SetFloat("speed", 0); // idle animasyonuna geçiş için hız değerini sıfırla
         agent.speed = 1;
     }
+    */
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 636731636634778826}
   m_Layer: 0
   m_Name: exit2
-  m_TagString: Untagged
+  m_TagString: gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.46
+  m_Radius: 0.48
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
