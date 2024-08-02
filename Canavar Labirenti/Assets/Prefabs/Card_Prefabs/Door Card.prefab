@@ -256,8 +256,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selection_Point_Interact: {fileID: 0}
+  selectionAction: {fileID: 0}
   card_State_script: {fileID: 0}
-  CardSpecialObject: {fileID: 0}
+  CardSpecialObject: {fileID: 7221485376244688413, guid: 54d381ae89f6be7438c43b478682e7b8, type: 3}
 --- !u!1 &7754990302738300786
 GameObject:
   m_ObjectHideFlags: 0

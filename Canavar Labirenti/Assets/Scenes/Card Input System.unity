@@ -10582,6 +10582,10 @@ PrefabInstance:
       propertyPath: PrefabToInstantiate
       value: 
       objectReference: {fileID: 564944987}
+    - target: {fileID: 4210615836211238994, guid: f63c1dda1e4e89e45a7a88fea1dac04a, type: 3}
+      propertyPath: cardSpellTag
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7615789111101155021, guid: f63c1dda1e4e89e45a7a88fea1dac04a, type: 3}
       propertyPath: m_Name
       value: Control_Panel_v0.01
