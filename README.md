@@ -117,6 +117,12 @@
 
 ---
 
+## Assetler
+
+[Üründe Kullanılan Assetlerin Linkleri](https://www.notion.so/Asset-Linkleri-b58bed53587a4ea98f56b0fc054d248c)
+
+---
+
 # Sprint 1
 
 - **Sprint Notları**
