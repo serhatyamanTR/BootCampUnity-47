@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selection_Point_Interact: {fileID: 4210615836211238994}
+  deckManager_Script: {fileID: 0}
   PrefabToInstantiate: {fileID: 0}
 --- !u!1 &641595612080791221
 GameObject:
@@ -1021,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9948fbf76ede37b49a3014ed2ecf9e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSpellTag: wall
+  cardSpellTag: 
   selectedObjectTransform: {fileID: 0}
   isObjectSelected: 0
 --- !u!1 &3910409528566110669

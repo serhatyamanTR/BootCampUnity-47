@@ -626,6 +626,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5598220182081345147}
     m_Modifications:
+    - target: {fileID: 4146195272142307367, guid: 4d28f742661273948a9a088291b4b68e, type: 3}
+      propertyPath: turnTimerRemain
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179944474229903787, guid: 4d28f742661273948a9a088291b4b68e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179944474229903787, guid: 4d28f742661273948a9a088291b4b68e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179944474229903787, guid: 4d28f742661273948a9a088291b4b68e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5041828554040890738, guid: 4d28f742661273948a9a088291b4b68e, type: 3}
       propertyPath: m_Name
       value: TurnTimer
