@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 0634b0cdf24aad64589445a968c9f395
-PrefabImporter:
-  externalObjects: {}
+guid: c70dd99c5cd1cbf4c9b8f226c3284b85
+timeCreated: 1487315553
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Walls/Simple/decorative_wall_E.prefab
+  uploadId: 276156

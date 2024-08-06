@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 40a20f2a3aa1fa14da91f14dd041246c
-PrefabImporter:
-  externalObjects: {}
+guid: 20373c6cd77ef3840af30d9c058fbee7
+timeCreated: 1486907261
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Windows/window_big.prefab
+  uploadId: 276156

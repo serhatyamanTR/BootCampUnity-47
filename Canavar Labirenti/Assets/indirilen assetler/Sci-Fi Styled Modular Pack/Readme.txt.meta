@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 5d453ef1c8d4ef04389d72b249cffb00
+guid: ae022090ef50d414e9f79013c22b1ad6
+timeCreated: 1487067706
+licenseType: Store
 TextScriptImporter:
-  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Readme.txt
+  uploadId: 276156

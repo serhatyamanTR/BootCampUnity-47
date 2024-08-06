@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 08bd45cb82e7b104b8de9103e05913e9
-PrefabImporter:
-  externalObjects: {}
+guid: 9050f6c8a29d61f49ac1b3052875c968
+timeCreated: 1487315609
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Decorative elements/bulletin_board_big.prefab
+  uploadId: 276156

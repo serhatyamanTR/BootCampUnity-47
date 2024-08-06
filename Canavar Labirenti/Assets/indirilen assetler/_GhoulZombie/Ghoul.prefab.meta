@@ -1,7 +1,17 @@
 fileFormatVersion: 2
-guid: 743392de2e8eca5438ce8f0117f8e5af
-PrefabImporter:
+guid: 227ee07e9e5b7914ba8fbb8f430be9a5
+timeCreated: 1521477726
+licenseType: Store
+NativeFormatImporter:
   externalObjects: {}
+  mainObjectFileID: 100100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 114531
+  packageName: Ghoul-zombie
+  packageVersion: 1.0
+  assetPath: Assets/_GhoulZombie/Ghoul.prefab
+  uploadId: 449051

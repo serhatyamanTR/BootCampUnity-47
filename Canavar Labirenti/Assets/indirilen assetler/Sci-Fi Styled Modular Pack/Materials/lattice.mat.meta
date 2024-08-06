@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: 3426f59b14a1d99478e0ede585dedcd5
+guid: 0f4853191d321d748b1f95a97d7b37f4
+timeCreated: 1486719799
+licenseType: Store
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Materials/lattice.mat
+  uploadId: 276156

@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: 21af9af6d10f70944924560e3ec8a725
+guid: 308340e065945a047805a1d420547940
+timeCreated: 1486917282
+licenseType: Store
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Animations/glass_door_closed.anim
+  uploadId: 276156

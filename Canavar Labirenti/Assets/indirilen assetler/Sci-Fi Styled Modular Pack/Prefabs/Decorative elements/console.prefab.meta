@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 0a350870743a1a94ea00f2e843e9e156
-PrefabImporter:
-  externalObjects: {}
+guid: d78f2ba16003e6e4681b4702d6dcb72e
+timeCreated: 1486827202
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Decorative elements/console.prefab
+  uploadId: 276156

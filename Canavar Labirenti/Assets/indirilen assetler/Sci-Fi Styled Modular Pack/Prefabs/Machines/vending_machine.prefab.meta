@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: aad89b04f34d3ca4882a4d22c3724d06
-PrefabImporter:
-  externalObjects: {}
+guid: 914595d46f531e44f8b35cd1232a0750
+timeCreated: 1487075383
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Machines/vending_machine.prefab
+  uploadId: 276156

@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 3b577f048491061479879823ee96c09d
-PrefabImporter:
-  externalObjects: {}
+guid: abf1f5179163bad469b298f28ca52e5f
+timeCreated: 1486978173
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Windows/window_big_corner_plug.prefab
+  uploadId: 276156

@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 63f57802d712bf1419a1f5e4cab264ed
-PrefabImporter:
-  externalObjects: {}
+guid: 2d927feb0fbf1a7429c095369d395de7
+timeCreated: 1486800022
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Doors/door_3.prefab
+  uploadId: 276156

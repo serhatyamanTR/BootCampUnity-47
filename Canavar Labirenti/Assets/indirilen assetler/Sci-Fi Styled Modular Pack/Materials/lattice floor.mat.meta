@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: 78c0e9821aeb65649bf8878b405e67d6
+guid: 62dcf96e239eb0d4db44cbe622abf152
+timeCreated: 1487062061
+licenseType: Store
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Materials/lattice floor.mat
+  uploadId: 276156

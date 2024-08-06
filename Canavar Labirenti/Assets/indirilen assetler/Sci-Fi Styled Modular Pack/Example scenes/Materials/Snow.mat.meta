@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: 60216bc508c6daf45a8508146b609a6b
+guid: d6ca041d3b582d94a8f2ad86f4b1e304
+timeCreated: 1487163507
+licenseType: Store
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Example scenes/Materials/Snow.mat
+  uploadId: 276156

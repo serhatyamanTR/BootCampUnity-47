@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: e2d4892952d920845a98477ff322876a
+guid: cebc898aaa1dfd04e98ce52f6f10d01b
+timeCreated: 1486757950
+licenseType: Store
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Animations/door_2_opened.anim
+  uploadId: 276156

@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 6e73277266e14974183a51f4d24b4ea2
-PrefabImporter:
-  externalObjects: {}
+guid: 7e2e8028213a4834fa8f2991bdefe708
+timeCreated: 1487075275
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Windows/window_big_blocker_3.prefab
+  uploadId: 276156

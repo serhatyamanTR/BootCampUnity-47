@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: f44702afa991ce546aefeaac5eef5921
+guid: 4195026f5c9772c40a9e4ebd5d4c6e08
+timeCreated: 1486756578
+licenseType: Store
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Animations/frame_door_2.controller
+  uploadId: 276156

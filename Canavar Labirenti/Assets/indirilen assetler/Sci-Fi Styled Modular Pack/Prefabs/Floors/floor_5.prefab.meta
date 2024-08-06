@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 4e3a7e015f2728b41921e81613f23238
-PrefabImporter:
-  externalObjects: {}
+guid: 548a40efc092c6f408cc4d1691b171cc
+timeCreated: 1486827227
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Floors/floor_5.prefab
+  uploadId: 276156

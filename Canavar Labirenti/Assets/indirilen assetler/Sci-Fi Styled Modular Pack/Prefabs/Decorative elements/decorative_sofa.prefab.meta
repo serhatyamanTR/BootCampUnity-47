@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 42b974c3737fac94cb1c886243b3401b
-PrefabImporter:
-  externalObjects: {}
+guid: e4362215d2f4b974a9729be40db2af84
+timeCreated: 1486799280
+licenseType: Store
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Prefabs/Decorative elements/decorative_sofa.prefab
+  uploadId: 276156

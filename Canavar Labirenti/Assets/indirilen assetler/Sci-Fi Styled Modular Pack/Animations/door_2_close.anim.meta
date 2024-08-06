@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: 4d1bfbdeea5e7b143bc9831b79dd1788
+guid: b06aa8b1533418b46be1e3c548d78ff5
+timeCreated: 1486757212
+licenseType: Store
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82913
+  packageName: Sci-Fi Styled Modular Pack
+  packageVersion: 1.1
+  assetPath: Assets/Sci-Fi Styled Modular Pack/Animations/door_2_close.anim
+  uploadId: 276156
