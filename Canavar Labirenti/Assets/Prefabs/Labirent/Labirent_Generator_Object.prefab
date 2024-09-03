@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8857598551399967587
+--- !u!1 &8777035502282798505
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1664558971447423699}
-  - component: {fileID: 2789351187965877542}
+  - component: {fileID: 6631229271673126484}
+  - component: {fileID: 117155548044637817}
+  - component: {fileID: 4763041820037050949}
   m_Layer: 0
   m_Name: Labirent_Generator_Object
   m_TagString: Untagged
@@ -17,32 +18,73 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1664558971447423699
+--- !u!4 &6631229271673126484
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8857598551399967587}
+  m_GameObject: {fileID: 8777035502282798505}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.36, y: 0, z: -12.9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2789351187965877542
+--- !u!114 &117155548044637817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8857598551399967587}
+  m_GameObject: {fileID: 8777035502282798505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e4838513a22c1d4c9e9715da8237795, type: 3}
+  m_Script: {fileID: 11500000, guid: 9afd424ae096c404fbab6842bb2a77f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Labirent_Room_Prefab: {fileID: 0}
-  Labirent_size: {x: 14, y: 14}
+  Labirent_size: {x: 7, y: 7}
+  RoomSize: 1
+  waitTime: 0
+  rooms: []
+  deadEnds: []
+  isSeedUsed: 1
+  seed: 10
+  volumeCenter: {x: 0, y: 0, z: 0}
+  volumeSize: {x: 0, y: 0, z: 0}
+  collectGeometry: 0
+--- !u!114 &4763041820037050949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8777035502282798505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 1
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.030000001
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0

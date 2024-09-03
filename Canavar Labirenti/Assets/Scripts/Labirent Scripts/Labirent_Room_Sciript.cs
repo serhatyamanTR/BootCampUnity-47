@@ -14,6 +14,7 @@ public class Labirent_Room : MonoBehaviour
     [SerializeField] GameObject[] walls;
     [SerializeField] MeshRenderer zemin;
 
+
     public void RemoveWall(int wallToRemove)
         {
             walls[wallToRemove].gameObject.SetActive(false);
@@ -42,4 +43,16 @@ public class Labirent_Room : MonoBehaviour
                 
                 }
         }
+    public int RoomActiveWallCount()
+        {
+            int count = 0;
+                foreach (var wall in walls)
+                    {
+                        if (wall.activeSelf)
+                        {
+                            count++;
+                        }
+                    }
+                return count;
+        }        
 }   
